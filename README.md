@@ -38,7 +38,7 @@ Tests use public contract runtimes and synthetic software-key fixtures. They are
 
 ## Migration status
 
-The custom hostname is being deployed. The previous Pages origin was refused by Reown (`Unauthorized: origin not allowed`). Require live verification of the custom hostname; add `https://p256-signer.tumf.dev` to its allowed origins, then require `node tests/pages-live.mjs` to pass before changing the iPhone app URLs. The app has not been switched.
+The dedicated HTTPS hostname is deployed. On 2026-11-12, `node tests/pages-live.mjs` passed five live routes, three home links, secure context/config, four browser public RPC reads, and a genuine pending WalletConnect pairing with explicit PNG download and cancellation. The saved PNG matched the displayed canvas and was deleted after verification. No wallet approval, signing or sending occurred. The relay now admits the new origin; dashboard settings were not inspected. This fulfills the prerequisite for the private app source URL/origin switch; existing installed binaries and TestFlight distribution are separate.
 
 ## Deployment
 
