@@ -1,0 +1,3646 @@
+{
+  "source": "openspec/changes/delegate-deployment-fees/ui-inventory.json",
+  "count": 204,
+  "states": [
+    {
+      "id": "W01.390",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W01.1280",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W01.679",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 679,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W01.680",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 680,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W01.681",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 681,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W01.320-text200",
+      "row": "W01",
+      "variant": null,
+      "fixture": "W01",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "textScale": 2,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W02.valid-fragment.390",
+      "row": "W02",
+      "variant": "valid-fragment",
+      "fixture": "W02.valid-fragment",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W02.valid-fragment.1280",
+      "row": "W02",
+      "variant": "valid-fragment",
+      "fixture": "W02.valid-fragment",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W02.invalid-fragment.390",
+      "row": "W02",
+      "variant": "invalid-fragment",
+      "fixture": "W02.invalid-fragment",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W02.invalid-fragment.1280",
+      "row": "W02",
+      "variant": "invalid-fragment",
+      "fixture": "W02.invalid-fragment",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.malformed.390",
+      "row": "W03",
+      "variant": "malformed",
+      "fixture": "W03.malformed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.malformed.1280",
+      "row": "W03",
+      "variant": "malformed",
+      "fixture": "W03.malformed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.oversize.390",
+      "row": "W03",
+      "variant": "oversize",
+      "fixture": "W03.oversize",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.oversize.1280",
+      "row": "W03",
+      "variant": "oversize",
+      "fixture": "W03.oversize",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.wrong-binding.390",
+      "row": "W03",
+      "variant": "wrong-binding",
+      "fixture": "W03.wrong-binding",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W03.wrong-binding.1280",
+      "row": "W03",
+      "variant": "wrong-binding",
+      "fixture": "W03.wrong-binding",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.no-wallet.390",
+      "row": "W04",
+      "variant": "no-wallet",
+      "fixture": "W04.no-wallet",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.no-wallet.1280",
+      "row": "W04",
+      "variant": "no-wallet",
+      "fixture": "W04.no-wallet",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.unselected.390",
+      "row": "W04",
+      "variant": "unselected",
+      "fixture": "W04.unselected",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.unselected.1280",
+      "row": "W04",
+      "variant": "unselected",
+      "fixture": "W04.unselected",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.legacy.390",
+      "row": "W04",
+      "variant": "legacy",
+      "fixture": "W04.legacy",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.legacy.1280",
+      "row": "W04",
+      "variant": "legacy",
+      "fixture": "W04.legacy",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.multiple.390",
+      "row": "W04",
+      "variant": "multiple",
+      "fixture": "W04.multiple",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W04.multiple.1280",
+      "row": "W04",
+      "variant": "multiple",
+      "fixture": "W04.multiple",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W05.missing-id.390",
+      "row": "W05",
+      "variant": "missing-id",
+      "fixture": "W05.missing-id",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W05.missing-id.1280",
+      "row": "W05",
+      "variant": "missing-id",
+      "fixture": "W05.missing-id",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W05.wrong-origin.390",
+      "row": "W05",
+      "variant": "wrong-origin",
+      "fixture": "W05.wrong-origin",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W05.wrong-origin.1280",
+      "row": "W05",
+      "variant": "wrong-origin",
+      "fixture": "W05.wrong-origin",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W06.injected.390",
+      "row": "W06",
+      "variant": "injected",
+      "fixture": "W06.injected",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W06.injected.1280",
+      "row": "W06",
+      "variant": "injected",
+      "fixture": "W06.injected",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W06.walletconnect.390",
+      "row": "W06",
+      "variant": "walletconnect",
+      "fixture": "W06.walletconnect",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W06.walletconnect.1280",
+      "row": "W06",
+      "variant": "walletconnect",
+      "fixture": "W06.walletconnect",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.cancelled.390",
+      "row": "W07",
+      "variant": "cancelled",
+      "fixture": "W07.cancelled",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.cancelled.1280",
+      "row": "W07",
+      "variant": "cancelled",
+      "fixture": "W07.cancelled",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.rejected.390",
+      "row": "W07",
+      "variant": "rejected",
+      "fixture": "W07.rejected",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.rejected.1280",
+      "row": "W07",
+      "variant": "rejected",
+      "fixture": "W07.rejected",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.unavailable.390",
+      "row": "W07",
+      "variant": "unavailable",
+      "fixture": "W07.unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W07.unavailable.1280",
+      "row": "W07",
+      "variant": "unavailable",
+      "fixture": "W07.unavailable",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W08.390",
+      "row": "W08",
+      "variant": null,
+      "fixture": "W08",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W08.1280",
+      "row": "W08",
+      "variant": null,
+      "fixture": "W08",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.wrong-chain.390",
+      "row": "W09",
+      "variant": "wrong-chain",
+      "fixture": "W09.wrong-chain",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.wrong-chain.1280",
+      "row": "W09",
+      "variant": "wrong-chain",
+      "fixture": "W09.wrong-chain",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.switch-rejected.390",
+      "row": "W09",
+      "variant": "switch-rejected",
+      "fixture": "W09.switch-rejected",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.switch-rejected.1280",
+      "row": "W09",
+      "variant": "switch-rejected",
+      "fixture": "W09.switch-rejected",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.unknown-chain.390",
+      "row": "W09",
+      "variant": "unknown-chain",
+      "fixture": "W09.unknown-chain",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W09.unknown-chain.1280",
+      "row": "W09",
+      "variant": "unknown-chain",
+      "fixture": "W09.unknown-chain",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W10.390",
+      "row": "W10",
+      "variant": null,
+      "fixture": "W10",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W10.1280",
+      "row": "W10",
+      "variant": null,
+      "fixture": "W10",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.offline.390",
+      "row": "W11",
+      "variant": "offline",
+      "fixture": "W11.offline",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.offline.1280",
+      "row": "W11",
+      "variant": "offline",
+      "fixture": "W11.offline",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.code.390",
+      "row": "W11",
+      "variant": "code",
+      "fixture": "W11.code",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.code.1280",
+      "row": "W11",
+      "variant": "code",
+      "fixture": "W11.code",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.prediction.390",
+      "row": "W11",
+      "variant": "prediction",
+      "fixture": "W11.prediction",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.prediction.1280",
+      "row": "W11",
+      "variant": "prediction",
+      "fixture": "W11.prediction",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.keyset.390",
+      "row": "W11",
+      "variant": "keyset",
+      "fixture": "W11.keyset",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.keyset.1280",
+      "row": "W11",
+      "variant": "keyset",
+      "fixture": "W11.keyset",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.block.390",
+      "row": "W11",
+      "variant": "block",
+      "fixture": "W11.block",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W11.block.1280",
+      "row": "W11",
+      "variant": "block",
+      "fixture": "W11.block",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W12.390",
+      "row": "W12",
+      "variant": null,
+      "fixture": "W12",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W12.1280",
+      "row": "W12",
+      "variant": null,
+      "fixture": "W12",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W13.390",
+      "row": "W13",
+      "variant": null,
+      "fixture": "W13",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W13.1280",
+      "row": "W13",
+      "variant": null,
+      "fixture": "W13",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W14.storage.390",
+      "row": "W14",
+      "variant": "storage",
+      "fixture": "W14.storage",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W14.storage.1280",
+      "row": "W14",
+      "variant": "storage",
+      "fixture": "W14.storage",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W15.blocked.390",
+      "row": "W15",
+      "variant": "blocked",
+      "fixture": "W15.blocked",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "definition": "Fresh successful inspection then explicit wallet disconnect; no review/canSend, connect available.",
+      "recordVersion": 2
+    },
+    {
+      "id": "W15.blocked.1280",
+      "row": "W15",
+      "variant": "blocked",
+      "fixture": "W15.blocked",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "definition": "Fresh successful inspection then explicit wallet disconnect; no review/canSend, connect available.",
+      "recordVersion": 2
+    },
+    {
+      "id": "W15.ready.390",
+      "row": "W15",
+      "variant": "ready",
+      "fixture": "W15.ready",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "definition": "Fresh successful inspection, valid storage and wallet; no attempt; action enabled without cap/checkbox.",
+      "recordVersion": 2
+    },
+    {
+      "id": "W15.ready.1280",
+      "row": "W15",
+      "variant": "ready",
+      "fixture": "W15.ready",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "definition": "Fresh successful inspection, valid storage and wallet; no attempt; action enabled without cap/checkbox.",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.account.390",
+      "row": "W16",
+      "variant": "account",
+      "fixture": "W16.account",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.account.1280",
+      "row": "W16",
+      "variant": "account",
+      "fixture": "W16.account",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.chain.390",
+      "row": "W16",
+      "variant": "chain",
+      "fixture": "W16.chain",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.chain.1280",
+      "row": "W16",
+      "variant": "chain",
+      "fixture": "W16.chain",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.input.390",
+      "row": "W16",
+      "variant": "input",
+      "fixture": "W16.input",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.input.1280",
+      "row": "W16",
+      "variant": "input",
+      "fixture": "W16.input",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.disconnect.390",
+      "row": "W16",
+      "variant": "disconnect",
+      "fixture": "W16.disconnect",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.disconnect.1280",
+      "row": "W16",
+      "variant": "disconnect",
+      "fixture": "W16.disconnect",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.normal.390",
+      "row": "W17",
+      "variant": "normal",
+      "fixture": "W17.normal",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.normal.1280",
+      "row": "W17",
+      "variant": "normal",
+      "fixture": "W17.normal",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.account-changed.390",
+      "row": "W17",
+      "variant": "account-changed",
+      "fixture": "W17.account-changed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.account-changed.1280",
+      "row": "W17",
+      "variant": "account-changed",
+      "fixture": "W17.account-changed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.chain-changed.390",
+      "row": "W17",
+      "variant": "chain-changed",
+      "fixture": "W17.chain-changed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.chain-changed.1280",
+      "row": "W17",
+      "variant": "chain-changed",
+      "fixture": "W17.chain-changed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.input-changed.390",
+      "row": "W17",
+      "variant": "input-changed",
+      "fixture": "W17.input-changed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W17.input-changed.1280",
+      "row": "W17",
+      "variant": "input-changed",
+      "fixture": "W17.input-changed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.hash.390",
+      "row": "W18",
+      "variant": "hash",
+      "fixture": "W18.hash",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.hash.1280",
+      "row": "W18",
+      "variant": "hash",
+      "fixture": "W18.hash",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.poll-timeout.390",
+      "row": "W18",
+      "variant": "poll-timeout",
+      "fixture": "W18.poll-timeout",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.poll-timeout.1280",
+      "row": "W18",
+      "variant": "poll-timeout",
+      "fixture": "W18.poll-timeout",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.wallet-switched.390",
+      "row": "W18",
+      "variant": "wallet-switched",
+      "fixture": "W18.wallet-switched",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W18.wallet-switched.1280",
+      "row": "W18",
+      "variant": "wallet-switched",
+      "fixture": "W18.wallet-switched",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W19.390",
+      "row": "W19",
+      "variant": null,
+      "fixture": "W19",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W19.1280",
+      "row": "W19",
+      "variant": null,
+      "fixture": "W19",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.reverted.390",
+      "row": "W20",
+      "variant": "reverted",
+      "fixture": "W20.reverted",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.reverted.1280",
+      "row": "W20",
+      "variant": "reverted",
+      "fixture": "W20.reverted",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.cancelled.390",
+      "row": "W20",
+      "variant": "cancelled",
+      "fixture": "W20.cancelled",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.cancelled.1280",
+      "row": "W20",
+      "variant": "cancelled",
+      "fixture": "W20.cancelled",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.unrelated-replacement.390",
+      "row": "W20",
+      "variant": "unrelated-replacement",
+      "fixture": "W20.unrelated-replacement",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.unrelated-replacement.1280",
+      "row": "W20",
+      "variant": "unrelated-replacement",
+      "fixture": "W20.unrelated-replacement",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.identity-mismatch.390",
+      "row": "W20",
+      "variant": "identity-mismatch",
+      "fixture": "W20.identity-mismatch",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.identity-mismatch.1280",
+      "row": "W20",
+      "variant": "identity-mismatch",
+      "fixture": "W20.identity-mismatch",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.readback-mismatch.390",
+      "row": "W20",
+      "variant": "readback-mismatch",
+      "fixture": "W20.readback-mismatch",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.readback-mismatch.1280",
+      "row": "W20",
+      "variant": "readback-mismatch",
+      "fixture": "W20.readback-mismatch",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.rejected.390",
+      "row": "W20",
+      "variant": "rejected",
+      "fixture": "W20.rejected",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.rejected.1280",
+      "row": "W20",
+      "variant": "rejected",
+      "fixture": "W20.rejected",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.nonce-overridden.390",
+      "row": "W20",
+      "variant": "nonce-overridden",
+      "fixture": "W20.nonce-overridden",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.nonce-overridden.1280",
+      "row": "W20",
+      "variant": "nonce-overridden",
+      "fixture": "W20.nonce-overridden",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-higher.390",
+      "row": "W20",
+      "variant": "wallet-fee-higher",
+      "fixture": "W20.wallet-fee-higher",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-higher.1280",
+      "row": "W20",
+      "variant": "wallet-fee-higher",
+      "fixture": "W20.wallet-fee-higher",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-lower-reverted.390",
+      "row": "W20",
+      "variant": "wallet-fee-lower-reverted",
+      "fixture": "W20.wallet-fee-lower-reverted",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-lower-reverted.1280",
+      "row": "W20",
+      "variant": "wallet-fee-lower-reverted",
+      "fixture": "W20.wallet-fee-lower-reverted",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-higher-readback-unknown.390",
+      "row": "W20",
+      "variant": "wallet-fee-higher-readback-unknown",
+      "fixture": "W20.wallet-fee-higher-readback-unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-fee-higher-readback-unknown.1280",
+      "row": "W20",
+      "variant": "wallet-fee-higher-readback-unknown",
+      "fixture": "W20.wallet-fee-higher-readback-unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-legacy-gasprice.390",
+      "row": "W20",
+      "variant": "wallet-legacy-gasprice",
+      "fixture": "W20.wallet-legacy-gasprice",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-legacy-gasprice.1280",
+      "row": "W20",
+      "variant": "wallet-legacy-gasprice",
+      "fixture": "W20.wallet-legacy-gasprice",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-higher.390",
+      "row": "W20",
+      "variant": "wallet-gas-higher",
+      "fixture": "W20.wallet-gas-higher",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-higher.1280",
+      "row": "W20",
+      "variant": "wallet-gas-higher",
+      "fixture": "W20.wallet-gas-higher",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-lower-reverted.390",
+      "row": "W20",
+      "variant": "wallet-gas-lower-reverted",
+      "fixture": "W20.wallet-gas-lower-reverted",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-lower-reverted.1280",
+      "row": "W20",
+      "variant": "wallet-gas-lower-reverted",
+      "fixture": "W20.wallet-gas-lower-reverted",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-higher-readback-unknown.390",
+      "row": "W20",
+      "variant": "wallet-gas-higher-readback-unknown",
+      "fixture": "W20.wallet-gas-higher-readback-unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W20.wallet-gas-higher-readback-unknown.1280",
+      "row": "W20",
+      "variant": "wallet-gas-higher-readback-unknown",
+      "fixture": "W20.wallet-gas-higher-readback-unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.send-timeout.390",
+      "row": "W21",
+      "variant": "send-timeout",
+      "fixture": "W21.send-timeout",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.send-timeout.1280",
+      "row": "W21",
+      "variant": "send-timeout",
+      "fixture": "W21.send-timeout",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.late-hash.390",
+      "row": "W21",
+      "variant": "late-hash",
+      "fixture": "W21.late-hash",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.late-hash.1280",
+      "row": "W21",
+      "variant": "late-hash",
+      "fixture": "W21.late-hash",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.rpc.390",
+      "row": "W21",
+      "variant": "rpc",
+      "fixture": "W21.rpc",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.rpc.1280",
+      "row": "W21",
+      "variant": "rpc",
+      "fixture": "W21.rpc",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.reorg.390",
+      "row": "W21",
+      "variant": "reorg",
+      "fixture": "W21.reorg",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.reorg.1280",
+      "row": "W21",
+      "variant": "reorg",
+      "fixture": "W21.reorg",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.no-candidate.390",
+      "row": "W21",
+      "variant": "no-candidate",
+      "fixture": "W21.no-candidate",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W21.no-candidate.1280",
+      "row": "W21",
+      "variant": "no-candidate",
+      "fixture": "W21.no-candidate",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.pending.390",
+      "row": "W22",
+      "variant": "pending",
+      "fixture": "W22.pending",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.pending.1280",
+      "row": "W22",
+      "variant": "pending",
+      "fixture": "W22.pending",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.unknown.390",
+      "row": "W22",
+      "variant": "unknown",
+      "fixture": "W22.unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.unknown.1280",
+      "row": "W22",
+      "variant": "unknown",
+      "fixture": "W22.unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.success.390",
+      "row": "W22",
+      "variant": "success",
+      "fixture": "W22.success",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.success.1280",
+      "row": "W22",
+      "variant": "success",
+      "fixture": "W22.success",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.walletOverride.390",
+      "row": "W22",
+      "variant": "walletOverride",
+      "fixture": "W22.walletOverride",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "W22.walletOverride.1280",
+      "row": "W22",
+      "variant": "walletOverride",
+      "fixture": "W22.walletOverride",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "W22.tampered.390",
+      "row": "W22",
+      "variant": "tampered",
+      "fixture": "W22.tampered",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.tampered.1280",
+      "row": "W22",
+      "variant": "tampered",
+      "fixture": "W22.tampered",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.storage-unavailable.390",
+      "row": "W22",
+      "variant": "storage-unavailable",
+      "fixture": "W22.storage-unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W22.storage-unavailable.1280",
+      "row": "W22",
+      "variant": "storage-unavailable",
+      "fixture": "W22.storage-unavailable",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W23.closed.390",
+      "row": "W23",
+      "variant": "closed",
+      "fixture": "W23.closed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W23.closed.1280",
+      "row": "W23",
+      "variant": "closed",
+      "fixture": "W23.closed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W23.open.390",
+      "row": "W23",
+      "variant": "open",
+      "fixture": "W23.open",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W23.open.1280",
+      "row": "W23",
+      "variant": "open",
+      "fixture": "W23.open",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.tab-focus.390",
+      "row": "W24",
+      "variant": "tab-focus",
+      "fixture": "W24.tab-focus",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "focus-ring"
+        }
+      ],
+      "captureControl": "connect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.tab-focus.1280",
+      "row": "W24",
+      "variant": "tab-focus",
+      "fixture": "W24.tab-focus",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "focus-ring"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "focus-ring"
+        }
+      ],
+      "captureControl": "connect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.pressed.390",
+      "row": "W24",
+      "variant": "pressed",
+      "fixture": "W24.pressed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "native-toggle"
+        }
+      ],
+      "captureControl": "inspect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.pressed.1280",
+      "row": "W24",
+      "variant": "pressed",
+      "fixture": "W24.pressed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "pointer-down-accent"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "native-toggle"
+        }
+      ],
+      "captureControl": "inspect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.disabled.390",
+      "row": "W24",
+      "variant": "disabled",
+      "fixture": "W24.disabled",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "never-disabled"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.disabled.1280",
+      "row": "W24",
+      "variant": "disabled",
+      "fixture": "W24.disabled",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "native-disabled"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "never-disabled"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "never-disabled"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.loading.390",
+      "row": "W24",
+      "variant": "loading",
+      "fixture": "W24.loading",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "busy"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "busy"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "busy"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "busy"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-loading-state"
+        }
+      ],
+      "captureControl": "connect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.loading.1280",
+      "row": "W24",
+      "variant": "loading",
+      "fixture": "W24.loading",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "busy"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "busy"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "busy"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "busy"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-loading-state"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-loading-state"
+        }
+      ],
+      "captureControl": "connect",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.keyboard-enter.390",
+      "row": "W24",
+      "variant": "keyboard-enter",
+      "fixture": "W24.keyboard-enter",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-send"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "no-send"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-send"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "no-send"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "sends-once"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "no-send"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-send"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.keyboard-enter.1280",
+      "row": "W24",
+      "variant": "keyboard-enter",
+      "fixture": "W24.keyboard-enter",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-send"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "no-send"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-send"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "no-send"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "sends-once"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "no-send"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-send"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.keyboard-space.390",
+      "row": "W24",
+      "variant": "keyboard-space",
+      "fixture": "W24.keyboard-space",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-send"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "no-send"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-send"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "no-send"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "sends-once"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "no-send"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-send"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W24.keyboard-space.1280",
+      "row": "W24",
+      "variant": "keyboard-space",
+      "fixture": "W24.keyboard-space",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "controls": [
+        {
+          "name": "prepare",
+          "element": "prepare",
+          "expect": "no-send"
+        },
+        {
+          "name": "connect",
+          "element": "connect",
+          "expect": "no-send"
+        },
+        {
+          "name": "switch",
+          "element": "switch",
+          "expect": "no-send"
+        },
+        {
+          "name": "inspect",
+          "element": "inspect",
+          "expect": "no-send"
+        },
+        {
+          "name": "send",
+          "element": "send",
+          "expect": "sends-once"
+        },
+        {
+          "name": "refresh",
+          "element": "refresh",
+          "expect": "no-send"
+        },
+        {
+          "name": "clear",
+          "element": "clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "cancel",
+          "element": "cancel-clear",
+          "expect": "no-send"
+        },
+        {
+          "name": "details",
+          "element": "payload-summary",
+          "expect": "no-send"
+        }
+      ],
+      "captureControl": "send",
+      "recordVersion": 2
+    },
+    {
+      "id": "W25.cancel-clear.390",
+      "row": "W25",
+      "variant": "cancel-clear",
+      "fixture": "W25.cancel-clear",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W25.cancel-clear.1280",
+      "row": "W25",
+      "variant": "cancel-clear",
+      "fixture": "W25.cancel-clear",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W25.confirm-clear.390",
+      "row": "W25",
+      "variant": "confirm-clear",
+      "fixture": "W25.confirm-clear",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W25.confirm-clear.1280",
+      "row": "W25",
+      "variant": "confirm-clear",
+      "fixture": "W25.confirm-clear",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-copy.390",
+      "row": "W26",
+      "variant": "pairing-copy",
+      "fixture": "W26.pairing-copy",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-copy.1280",
+      "row": "W26",
+      "variant": "pairing-copy",
+      "fixture": "W26.pairing-copy",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-cancel.390",
+      "row": "W26",
+      "variant": "pairing-cancel",
+      "fixture": "W26.pairing-cancel",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-cancel.1280",
+      "row": "W26",
+      "variant": "pairing-cancel",
+      "fixture": "W26.pairing-cancel",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-error.390",
+      "row": "W26",
+      "variant": "pairing-error",
+      "fixture": "W26.pairing-error",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W26.pairing-error.1280",
+      "row": "W26",
+      "variant": "pairing-error",
+      "fixture": "W26.pairing-error",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.initializing.390",
+      "row": "W27",
+      "variant": "initializing",
+      "fixture": "W27.initializing",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.initializing.1280",
+      "row": "W27",
+      "variant": "initializing",
+      "fixture": "W27.initializing",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.unavailable.390",
+      "row": "W27",
+      "variant": "unavailable",
+      "fixture": "W27.unavailable",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.unavailable.1280",
+      "row": "W27",
+      "variant": "unavailable",
+      "fixture": "W27.unavailable",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.legacy-conflict.390",
+      "row": "W27",
+      "variant": "legacy-conflict",
+      "fixture": "W27.legacy-conflict",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W27.legacy-conflict.1280",
+      "row": "W27",
+      "variant": "legacy-conflict",
+      "fixture": "W27.legacy-conflict",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.newer-evidence.390",
+      "row": "W28",
+      "variant": "newer-evidence",
+      "fixture": "W28.newer-evidence",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.newer-evidence.1280",
+      "row": "W28",
+      "variant": "newer-evidence",
+      "fixture": "W28.newer-evidence",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.unsaved-hash.390",
+      "row": "W28",
+      "variant": "unsaved-hash",
+      "fixture": "W28.unsaved-hash",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.unsaved-hash.1280",
+      "row": "W28",
+      "variant": "unsaved-hash",
+      "fixture": "W28.unsaved-hash",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.late-conflict.390",
+      "row": "W28",
+      "variant": "late-conflict",
+      "fixture": "W28.late-conflict",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W28.late-conflict.1280",
+      "row": "W28",
+      "variant": "late-conflict",
+      "fixture": "W28.late-conflict",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.provider.390",
+      "row": "W16",
+      "variant": "provider",
+      "fixture": "W16.provider",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "W16.provider.1280",
+      "row": "W16",
+      "variant": "provider",
+      "fixture": "W16.provider",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 2
+    },
+    {
+      "id": "L20.fee-overridden-deployed.390",
+      "row": "W20",
+      "variant": "fee-overridden-deployed",
+      "fixture": "L20.fee-overridden-deployed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.fee-overridden-deployed.1280",
+      "row": "W20",
+      "variant": "fee-overridden-deployed",
+      "fixture": "L20.fee-overridden-deployed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.fee-overridden-not-deployed.390",
+      "row": "W20",
+      "variant": "fee-overridden-not-deployed",
+      "fixture": "L20.fee-overridden-not-deployed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.fee-overridden-not-deployed.1280",
+      "row": "W20",
+      "variant": "fee-overridden-not-deployed",
+      "fixture": "L20.fee-overridden-not-deployed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.fee-overridden-unknown.390",
+      "row": "W20",
+      "variant": "fee-overridden-unknown",
+      "fixture": "L20.fee-overridden-unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.fee-overridden-unknown.1280",
+      "row": "W20",
+      "variant": "fee-overridden-unknown",
+      "fixture": "L20.fee-overridden-unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-within-limits.390",
+      "row": "W20",
+      "variant": "gas-overridden-within-limits",
+      "fixture": "L20.gas-overridden-within-limits",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-within-limits.1280",
+      "row": "W20",
+      "variant": "gas-overridden-within-limits",
+      "fixture": "L20.gas-overridden-within-limits",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-deployed.390",
+      "row": "W20",
+      "variant": "gas-overridden-deployed",
+      "fixture": "L20.gas-overridden-deployed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-deployed.1280",
+      "row": "W20",
+      "variant": "gas-overridden-deployed",
+      "fixture": "L20.gas-overridden-deployed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-not-deployed.390",
+      "row": "W20",
+      "variant": "gas-overridden-not-deployed",
+      "fixture": "L20.gas-overridden-not-deployed",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-not-deployed.1280",
+      "row": "W20",
+      "variant": "gas-overridden-not-deployed",
+      "fixture": "L20.gas-overridden-not-deployed",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-unknown.390",
+      "row": "W20",
+      "variant": "gas-overridden-unknown",
+      "fixture": "L20.gas-overridden-unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L20.gas-overridden-unknown.1280",
+      "row": "W20",
+      "variant": "gas-overridden-unknown",
+      "fixture": "L20.gas-overridden-unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.pending.390",
+      "row": "W22",
+      "variant": "pending",
+      "fixture": "L22.pending",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.unknown.390",
+      "row": "W22",
+      "variant": "unknown",
+      "fixture": "L22.unknown",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.success.390",
+      "row": "W22",
+      "variant": "success",
+      "fixture": "L22.success",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.tampered.390",
+      "row": "W22",
+      "variant": "tampered",
+      "fixture": "L22.tampered",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.pending.1280",
+      "row": "W22",
+      "variant": "pending",
+      "fixture": "L22.pending",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.unknown.1280",
+      "row": "W22",
+      "variant": "unknown",
+      "fixture": "L22.unknown",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.success.1280",
+      "row": "W22",
+      "variant": "success",
+      "fixture": "L22.success",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    },
+    {
+      "id": "L22.tampered.1280",
+      "row": "W22",
+      "variant": "tampered",
+      "fixture": "L22.tampered",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "textScale": 1,
+      "locale": "ja-JP",
+      "colorScheme": "light",
+      "reducedMotion": "reduce",
+      "recordVersion": 1
+    }
+  ]
+}

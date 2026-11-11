@@ -1,0 +1,610 @@
+{
+ "schemaVersion": 1,
+ "authority": "openspec/specs/key-change-web/spec.md (Requirement: Dedicated accessible inherited visual surface): exactly 62 IDs / 130 entries; base production renderer/styles at 9c39bc3e9e7aa372ed0fc50ad638655c974d6da0 with the wallet-owned outer fee content/removals",
+ "variants": {
+  "390x844": {
+   "width": 390,
+   "height": 844,
+   "deviceScaleFactor": 1
+  },
+  "1280x900": {
+   "width": 1280,
+   "height": 900,
+   "deviceScaleFactor": 1
+  },
+  "390x844-text200-reduced": {
+   "width": 195,
+   "height": 422,
+   "deviceScaleFactor": 4,
+   "reducedMotion": true,
+   "note": "390x844 device at 200% zoom: 195x422 CSS px layout"
+  }
+ },
+ "requiredIds": [
+  "KW01",
+  "KW02",
+  "KW03",
+  "KW04",
+  "KW05",
+  "KW06",
+  "KW07-curve",
+  "KW07-duplicate",
+  "KW07-last",
+  "KW07-limit",
+  "KW08-blank",
+  "KW08-bounds",
+  "KW08-format",
+  "KW09",
+  "KW10",
+  "KW11",
+  "KW12",
+  "KW13",
+  "KW14",
+  "KW15",
+  "KW16-changed",
+  "KW16-expired",
+  "KW16-invalid",
+  "KW16-lost",
+  "KW16-rejected",
+  "KW17-choices",
+  "KW17-pairing",
+  "KW17-unavailable",
+  "KW18-refused",
+  "KW18-wrong",
+  "KW20",
+  "KW20-checking",
+  "KW20-nonce",
+  "KW21",
+  "KW22-late-hash",
+  "KW22-no-hash",
+  "KW23-one",
+  "KW23-pending",
+  "KW24",
+  "KW25",
+  "KW26-cap",
+  "KW26-event",
+  "KW26-fees",
+  "KW26-foreign",
+  "KW26-reorg",
+  "KW26-rpc",
+  "KW26-same-block",
+  "KW26-state",
+  "KW26-state-advanced",
+  "KW26-state-resolved",
+  "KW27",
+  "KW28",
+  "KW29-conflict",
+  "KW29-corrupt",
+  "KW29-unavailable",
+  "KW30-hash",
+  "KW30-reserved",
+  "KW30-terminal",
+  "KW30-v2-hash",
+  "KW30-v2-reserved",
+  "KW30-v2-terminal",
+  "KW31"
+ ],
+ "requiredCount": 130,
+ "entries": [
+  {
+   "id": "KW01",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW01",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW02",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW02",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW02",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW03",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW03",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW04",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW04",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW05",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW05",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW06",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW06",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW07-curve",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW07-curve",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW07-duplicate",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW07-duplicate",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW07-last",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW07-last",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW07-limit",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW07-limit",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW08-blank",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW08-blank",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW08-bounds",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW08-bounds",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW08-format",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW08-format",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW09",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW09",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW10",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW10",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW11",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW11",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW12",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW12",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW12",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW13",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW13",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW14",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW14",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW14",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW15",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW15",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW16-changed",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW16-changed",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW16-expired",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW16-expired",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW16-invalid",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW16-invalid",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW16-lost",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW16-lost",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW16-rejected",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW16-rejected",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW17-choices",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW17-choices",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW17-pairing",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW17-pairing",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW17-unavailable",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW17-unavailable",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW18-refused",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW18-refused",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW18-wrong",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW18-wrong",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW20",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW20",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW20-checking",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW20-checking",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW20-nonce",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW20-nonce",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW21",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW21",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW21",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW22-late-hash",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW22-late-hash",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW22-no-hash",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW22-no-hash",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW22-no-hash",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW23-one",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW23-one",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW23-pending",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW23-pending",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW24",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW24",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW25",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW25",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-cap",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-cap",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-event",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-event",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-fees",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-fees",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-foreign",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-foreign",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-reorg",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-reorg",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-rpc",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-rpc",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-same-block",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-same-block",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-state",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-state",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-state-advanced",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-state-advanced",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW26-state-resolved",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW26-state-resolved",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW27",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW27",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW27",
+   "variant": "390x844-text200-reduced"
+  },
+  {
+   "id": "KW28",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW28",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW29-conflict",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW29-conflict",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW29-corrupt",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW29-corrupt",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW29-unavailable",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW29-unavailable",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-hash",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-hash",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-reserved",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-reserved",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-terminal",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-terminal",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-v2-hash",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-v2-hash",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-v2-reserved",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-v2-reserved",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW30-v2-terminal",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW30-v2-terminal",
+   "variant": "390x844"
+  },
+  {
+   "id": "KW31",
+   "variant": "1280x900"
+  },
+  {
+   "id": "KW31",
+   "variant": "390x844"
+  }
+ ]
+}

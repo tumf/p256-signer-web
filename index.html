@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>P-256 Signer — 配備Web</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="app.js"></script>
+</head>
+<body class="deployment">
+<main aria-busy="true">
+  <h1 id="page-title">Signerを配備</h1>
+
+  <section id="section-plan" aria-labelledby="page-title">
+    <div class="step" hidden>01 / PUBLIC PLAN</div>
+    <div>
+      <h2 id="plan-title" tabindex="-1" hidden>配備データを確認</h2>
+      <div id="input-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <form id="import-form" novalidate hidden>
+        <label for="manual">配備データ（v1 JSON）</label>
+        <textarea id="manual" spellcheck="false" autocomplete="off" aria-describedby="manual-help input-error"
+          placeholder='{"chainId":137,"expectedAddress":"0x…",…,"version":1}'></textarea>
+        <small id="manual-help">アプリの「配備Webを開く」で開いた場合は自動で読み込みます。開けない場合は「配備データをコピー」した内容を貼り付けてください。公開鍵だけ・URLは受け付けません。</small><br>
+        <button id="prepare" type="submit">配備データを確認</button>
+      </form>
+      <p id="plan-empty" class="muted">iPhoneアプリからSignerを選んで開いてください。</p>
+      <div id="plan" hidden>
+        <h3 id="plan-heading" tabindex="-1">配備先</h3>
+        <p class="address" id="plan-address"></p>
+        <div id="plan-state" tabindex="-1" class="status" role="status" aria-live="polite" hidden></div>
+        <div id="plan-blocked" class="status error" role="alert" tabindex="-1" hidden></div>
+        <button id="retry-inspection" type="button" hidden>もう一度確認する</button>
+        <button id="copy-address" class="secondary" type="button" hidden>アドレスをコピー</button>
+        <dl>
+          <dt>ネットワーク</dt><dd id="plan-chain">Polygon</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-wallet" aria-labelledby="page-title">
+    <div class="step" hidden>02 / WALLET CONFIRM</div>
+    <div>
+      <h2 id="wallet-title" hidden>ウォレットで配備</h2>
+      <p id="wallet-inactive" class="muted" hidden></p>
+      <fieldset id="wallet-fieldset" hidden>
+        <legend>ウォレットを選択</legend>
+        <div id="wallet-choices"></div>
+        <p id="no-wallet" class="muted" hidden></p>
+      </fieldset>
+      <div id="pairing" class="pairing" hidden>
+        <p>ウォレットアプリでQRを読み取るか、接続URIをコピーしてください。</p>
+        <canvas id="pairing-qr" width="256" height="256" aria-label="WalletConnect接続用QR"></canvas>
+        <label for="pairing-uri">WalletConnect接続URI</label>
+        <input id="pairing-uri" type="text" readonly spellcheck="false">
+        <button id="copy-uri" class="secondary" type="button">URIをコピー</button>
+        <button id="cancel-pairing" class="secondary" type="button">接続を中止</button>
+      </div>
+      <div id="wallet-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="wallet-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="inspect-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="inspect-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="deployed" hidden>
+        <h3 id="deployed-heading" tabindex="-1">配備済み（読取り確認）</h3>
+        <p class="status" id="deployed-text"></p>
+      </div>
+      <div id="review" hidden>
+        <h3 id="review-heading" tabindex="-1">送信内容の確認</h3>
+        <dl id="review-list"></dl>
+      </div>
+      <!-- Connect never sends. The next explicit action inspects and requests wallet deployment approval. -->
+      <div id="next-step" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <p id="gas-note" class="muted" hidden>ガス代はウォレットで確認します。</p>
+      <button id="send" type="button" disabled>ウォレットを接続</button>
+      <button id="disconnect" class="secondary" type="button" hidden>切断</button>
+      <div id="send-error" class="status error" role="alert" tabindex="-1" hidden></div>
+    </div>
+  </section>
+
+  <section id="section-settlement" aria-labelledby="page-title">
+    <div class="step" hidden>03 / SETTLEMENT</div>
+    <div>
+      <h2 id="settlement-title" tabindex="-1" hidden>送信と確定</h2>
+      <div id="resume-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="storage-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <p id="no-attempt" class="muted" hidden></p>
+      <div id="attempt" hidden>
+        <div id="attempt-status" class="status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
+        <dl id="attempt-list" hidden></dl>
+        <button id="refresh" class="secondary" type="button">状況を更新</button>
+        <button id="clear" class="secondary" type="button" hidden>記録を消去</button>
+        <div id="clear-confirm" class="confirm" hidden>
+          <p id="clear-text">この端末の送信記録だけを消去します。チェーン上の配備・iPhoneの鍵・アプリの一覧は変わりません。</p>
+          <button id="confirm-clear" type="button">消去する</button>
+          <button id="cancel-clear" class="secondary" type="button">消去しない</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical evidence and explicit recovery controls, folded by default. Opening the details does not act. -->
+  <details id="payload-details" class="technical">
+    <summary id="payload-summary">詳細</summary>
+    <div id="attempt-context" hidden>
+      <p id="attempt-context-text"></p>
+      <dl id="attempt-detail-list"></dl>
+    </div>
+    <div id="plan-technical" hidden>
+      <h3>配備データ</h3>
+      <dl id="plan-technical-list">
+        <dt>方式</dt><dd>HybridDeleGator v1.3.0 · ERC1967 CREATE2</dd>
+        <dt>公開鍵</dt><dd class="mono" id="plan-key"></dd>
+        <dt>keyID</dt><dd class="mono" id="plan-keyid"></dd>
+        <dt>ソルト</dt><dd class="mono" id="plan-salt"></dd>
+        <dt>EOA管理者</dt><dd>なし（ゼロアドレス）· 登録鍵1つ</dd>
+      </dl>
+      <p class="muted">公開データの全項目（JSON）</p>
+      <pre id="payload"></pre>
+    </div>
+    <div id="attempt-technical" hidden>
+      <h3>送信記録の詳細（旧v1形式の記録のみ）</h3>
+      <dl id="attempt-technical-list"></dl>
+    </div>
+    <div id="attempt-recovery" hidden>
+      <h3>送信記録の復旧（取引ハッシュによる読取り照合）</h3>
+      <p class="muted">ウォレットの取引履歴に、この送信の取引ハッシュがある場合だけ使います。保存済みの送信内容（chain・from・to・data・value）と一致する取引だけを読取りで照合し、送信はしません。</p>
+      <form id="hash-form" novalidate hidden>
+        <label for="manual-hash">取引ハッシュ（読取り照合のみ）</label>
+        <input id="manual-hash" type="text" spellcheck="false" autocomplete="off" aria-describedby="hash-error">
+        <div id="hash-error" class="status error" role="alert" hidden></div>
+        <button id="check-hash" type="submit" class="secondary">ハッシュで照合</button>
+      </form>
+    </div>
+    <div id="manual-controls">
+      <h3>個別操作（通常は不要）</h3>
+      <p class="muted">切り分けのために1手順ずつ行う場合だけ使います。送信はしません。</p>
+      <details id="manual-import"><summary>配備データを貼り付ける</summary></details>
+      <button id="connect" class="secondary" type="button">接続</button>
+      <button id="switch" class="secondary" type="button" hidden>Polygonに切り替える</button>
+      <button id="inspect" class="secondary" type="button">チェーン上で照合</button>
+    </div>
+    <h3>注意事項</h3>
+    <p id="intro-notice" class="muted">公開情報の受渡しであり、本人認証やSafe登録ではありません。送信はあなたが確認して承認した1件だけです。ガス代は接続したウォレットが支払います。iPhoneの秘密鍵は書き出しません。アプリは配備状況を追跡しません。2回の確認ブロックは確定性の保証ではありません。Safeへの登録は行いません。</p>
+    <p class="muted"><a href="licenses/NOTICES.txt">ライセンスと表示</a> · Portions © 2025 Reown, Inc. All Rights Reserved</p>
+  </details>
+
+  <nav aria-label="関連する操作"><a href="key-change.html">内部鍵の追加・削除</a></nav>
+</main>
+</body>
+</html>

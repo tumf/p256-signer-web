@@ -1,0 +1,25 @@
+title = "P256 Web reviewed synthetic data"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public token contract address in Permit2 test vector"
+paths = ['''tests/fixtures/DeFiV3/permit2-single\.json''']
+regexes = ['''0xaf88d065e77c8cC2239327C5EDb3A432268e5831''']
+
+[[allowlists]]
+description = "Deliberately wrong synthetic signatures in key-change vectors"
+paths = ['''tests/fixtures/key-swift-vectors\.json''']
+regexTarget = "line"
+regexes = ['''"wrongKey": "0x[0-9a-f]+"''']
+
+[[allowlists]]
+description = "Vendored ethers public default provider identifiers, upstream library bytes"
+paths = ['''vendor/ethers\.cjs''']
+regexes = ['''[a-zA-Z0-9_-]+''']
+
+[[allowlists]]
+description = "Synthetic wrongKey control compiled from deterministic test helper"
+paths = ['''tests/key-model\.test\.mjs''']
+regexTarget = "line"
+regexes = ['''wrongKey''']

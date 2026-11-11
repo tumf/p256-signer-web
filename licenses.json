@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "note": "License manifest of distributed third-party code. Records obligations only: no legal approval, registration, commercial entitlement or Reown endorsement is claimed.",
+  "packages": [
+    {
+      "package": "@safe-global/protocol-kit",
+      "version": "8.0.7",
+      "license": "MIT",
+      "source": "https://registry.npmjs.org/@safe-global/protocol-kit/-/protocol-kit-8.0.7.tgz",
+      "origin": "node_modules/@safe-global/protocol-kit/LICENSE.md",
+      "vendorPath": "node_modules/@safe-global/protocol-kit/LICENSE.md",
+      "servedPath": "licenses/safe-protocol-kit-LICENSE.md",
+      "sha256": "b3ef2e60b62669fdc7f83bce8f871cbb47c99043a3e94254d81521997eec0773",
+      "lazy": true
+    },
+    {
+      "package": "@walletconnect/ethereum-provider",
+      "version": "2.26.0",
+      "license": "WalletConnect Community License Agreement (Release Date: 20 August 2025)",
+      "source": "https://registry.npmjs.org/@walletconnect/ethereum-provider/-/ethereum-provider-2.26.0.tgz",
+      "origin": "node_modules/@walletconnect/ethereum-provider/LICENSE.md",
+      "vendorPath": "vendor/walletconnect-LICENSE.md",
+      "servedPath": "licenses/walletconnect-LICENSE.md",
+      "sha256": "1cb6f8cfe21f54ab1105105717eaa2ba08343037a2a9c41dfd5ab09e3ce270fc",
+      "notice": "Portions © 2025 Reown, Inc. All Rights Reserved",
+      "lazy": true
+    },
+    {
+      "package": "qrcode",
+      "version": "1.5.4",
+      "license": "MIT",
+      "source": "https://registry.npmjs.org/qrcode/-/qrcode-1.5.4.tgz",
+      "origin": "node_modules/qrcode/license",
+      "vendorPath": "vendor/qrcode-LICENSE",
+      "servedPath": "licenses/qrcode-LICENSE",
+      "sha256": "8df47c6ad9ac2c41eb9b2a72def9908959da0ede8dadd56c7b249c1bdb0c5ce6",
+      "lazy": true
+    },
+    {
+      "package": "ethers",
+      "version": "5.4.0",
+      "license": "MIT",
+      "source": "spike 432c0935af52fc940b9148dd897a916258b9a64f:spikes/registration-web/ethers.js (UMD, SHA-256 b2333a8489b783a467eb9e5ec8e9d56e9d1cea7cc1b574e5e41fac41300e28cb), vendored as vendor/ethers.cjs",
+      "vendored": true,
+      "vendorPath": "vendor/ethers-LICENSE.md",
+      "servedPath": "licenses/ethers-LICENSE.md",
+      "sha256": "38f156ca482f33e6ec062da7c682da058c65c2932782fd4ea47aaecd01138704"
+    },
+    {
+      "package": "OpenZeppelin ERC1967Proxy creation bytecode",
+      "version": "pinned artifact SHA-256 103c4d3815dd2472c4a257bcd94e8b8b49ce39de453add9d8285b749bb926aa7",
+      "license": "MIT",
+      "source": "spike 432c0935af52fc940b9148dd897a916258b9a64f:spikes/registration-web/proxy.json (= Sources/SignerRegistry/Resources/ERC1967Proxy.json)",
+      "vendored": true,
+      "vendorPath": "vendor/OpenZeppelin-LICENSE",
+      "servedPath": "licenses/OpenZeppelin-LICENSE",
+      "sha256": "bab8476a2e82b5bce77095b598879649771caaca4afa75926cae1d90ddea8537"
+    }
+  ]
+}

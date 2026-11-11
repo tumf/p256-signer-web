@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "sourceRepository": "https://github.com/eth-infinitism/account-abstraction",
+  "sourceRevision": "7af70c8993a6f42973f520ae0752386a5032abe7",
+  "sourceVersion": "0.7.0",
+  "sourcePath": "contracts/core/EntryPoint.sol",
+  "sourceSHA256": "ddad73961da5bad85f0656d9c8e6e729d36a02854198765d335fb59205a55b9e",
+  "spdx": "GPL-3.0",
+  "snapshotSHA256": "0d7cae8cf70eb2c61f9f73800c38c990a5d1316e26a1d47e4c8fd9537bf9fed0",
+  "runtimeSHA256": "674d73ee2acf6d72a5b32b6e05150b9ddcfcee0429a0e7914929faccbc2bf4d5",
+  "runtimeKeccak256": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+  "runtimeBytes": 16035,
+  "licenseSHA256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+  "provenance": "Historical external experiment capture from public Polygon RPC https://polygon.drpc.org; fixture hashes were locally checked by the operator and are neither a reproducible compilation attestation nor a light-client proof. No public RPC call is part of this change or its gate. Immutable senderCreator bytes retained; only empty initCode operations are admitted. Existing source revision supplies semantic/ABI authority; equivalence of locally rebuilt bytecode is not claimed."
+}

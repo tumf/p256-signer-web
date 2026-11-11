@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>P-256 Signer — 内部鍵の追加・削除</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="key-change.js"></script>
+</head>
+<body>
+<header><strong>P-256 / SIGNER</strong><span>内部鍵の追加・削除 · Polygon</span></header>
+<main aria-busy="false" data-page="key-change">
+  <div class="intro">
+    <div>
+      <span class="eyebrow">ONE SIGNER. ONE KEY CHANGE.</span>
+      <h1>内部鍵の追加・削除</h1>
+      <p>HybridDeleGatorの内部1-of-N鍵を1件だけ追加または削除します。内部鍵の数はSafeのOwner・しきい値とは独立で、このページはSafe側を変更しません。</p>
+    </div>
+    <p class="notice">iPhoneの承認と、選んだ実行用ウォレットからの1回の送信が必要です。<br><strong>自動での署名要求・送信・再送はしません。</strong></p>
+  </div>
+
+  <section aria-labelledby="signer-title" data-section="01">
+    <div class="step">01 / SIGNER</div>
+    <div>
+      <h2 id="signer-title">Signerの公開データを確認</h2>
+      <div id="signer-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="signer-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <form id="anchor-form" novalidate>
+        <label for="anchor">Signerの公開データ（hybrid-<wbr>key-<wbr>authority）</label>
+        <textarea id="anchor" spellcheck="false" autocomplete="off" aria-describedby="anchor-help signer-error"
+          placeholder='{"v":"1","kind":"hybrid-key-authority","chainId":"137","signer":"0x…",…}'></textarea>
+        <small id="anchor-help">iPhoneアプリで選んだSignerの公開データを貼り付けます。曲線上の点・ID・アドレスを独立に検証し、チェーン上の全鍵とnonceを読み取ります。</small><br>
+        <button id="inspect" type="submit">公開データとチェーン情報を確認</button>
+        <button id="inspect-cancel" class="secondary" type="button" hidden>確認を中止</button>
+      </form>
+      <div id="signer" hidden>
+        <h3 id="signer-heading" tabindex="-1">選んだSigner（読取り専用）</h3>
+        <p class="address" id="signer-address"></p>
+        <dl>
+          <dt>承認する鍵 keyID</dt><dd class="mono" id="signer-keyid"></dd>
+          <dt>公開鍵</dt><dd class="mono" id="signer-key"></dd>
+          <dt>確認ブロック</dt><dd class="mono" id="signer-block"></dd>
+          <dt>nonce</dt><dd class="mono" id="signer-nonce"></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="change-title" data-section="02">
+    <div class="step">02 / CHANGE</div>
+    <div>
+      <h2 id="change-title">現在の全鍵と変更内容</h2>
+      <div id="change-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="change-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="keys" hidden>
+        <h3 id="keys-heading">登録済みの全鍵（<span id="keys-count"></span>個）</h3>
+        <dl id="keys-list"></dl>
+      </div>
+      <form id="change-form" novalidate>
+        <fieldset id="change-fields" disabled>
+          <legend>変更（1件のみ）</legend>
+          <label class="choice"><input type="radio" name="mode" id="mode-add" value="add" checked>鍵を追加する</label>
+          <label class="choice"><input type="radio" name="mode" id="mode-remove" value="remove">既存の鍵を削除する</label>
+          <div id="add-fields">
+            <label for="bare-key">追加する鍵の公開データ（p256-<wbr>public-<wbr>key）</label>
+            <textarea id="bare-key" spellcheck="false" autocomplete="off" aria-describedby="bare-help change-error"
+              placeholder='{"v":"1","kind":"p256-public-key","publicKey":"0x04…","keyId":"…"}'></textarea>
+            <small id="bare-help">別の端末の公開鍵です。登録済みの鍵と重複していないことを確認します。</small>
+          </div>
+          <fieldset id="remove-fields" aria-describedby="change-error" hidden>
+            <legend>削除する鍵 keyID（チェーンから読み取った登録済みの鍵のみ）</legend>
+            <div id="remove-choices"></div>
+          </fieldset>
+          <label for="fee-max">署名対象の手数料上限 max<wbr>Fee<wbr>Per<wbr>Gas（Gwei）</label>
+          <input type="text" id="fee-max" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="fee-help change-error">
+          <label for="fee-priority">署名対象の優先料 max<wbr>Priority<wbr>Fee<wbr>Per<wbr>Gas（Gwei）</label>
+          <input type="text" id="fee-priority" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="fee-help change-error">
+          <small id="fee-help">ネットワークの目安から自動入力しません。小数9桁までの半角数値で入力してください。</small>
+        </fieldset>
+      </form>
+      <p id="self-removal" class="status warning" hidden></p>
+      <div id="effect" hidden>
+        <h3>変更後の鍵数と前払い</h3>
+        <dl id="effect-list"></dl>
+      </div>
+      <button id="refresh" class="secondary" type="button" hidden>チェーン情報を再確認</button>
+      <a id="prefund-link" class="choice" href="prefund.html" hidden>前払い残高を入金する</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="approval-title" data-section="03">
+    <div class="step">03 / APPROVAL</div>
+    <div>
+      <h2 id="approval-title">iPhoneに承認を要求</h2>
+      <div id="approval-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="approval-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <button id="connect" type="button" disabled>iPhoneに接続</button>
+      <div id="pairing" class="pairing" hidden>
+        <p>iPhoneアプリの「Webからの鍵変更」でこのQRを読み取り、接続を明示的に許可してください。接続URIは自動保存しません。</p>
+        <canvas id="pairing-qr" width="256" height="256" aria-label="iPhone接続用QR"></canvas>
+        <a id="pairing-open">このiPhoneで開く</a><br>
+        <button id="pairing-cancel" class="secondary" type="button">接続を中止</button>
+      </div>
+      <button id="preview" type="button" hidden disabled>要求内容を確認</button>
+      <div id="request" hidden>
+        <h3 id="request-heading" tabindex="-1">iPhoneに要求する鍵変更（全項目）</h3>
+        <dl id="request-list"></dl>
+      </div>
+      <button id="sign" type="button" hidden disabled>表示した鍵変更をiPhoneに要求</button>
+      <button id="disconnect" class="secondary" type="button" hidden>iPhoneとの接続を切断</button>
+      <div id="verified" hidden>
+        <h3 id="verified-heading" tabindex="-1">署名検証済み・未実行</h3>
+        <dl id="verified-list"></dl>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="execute-title" data-section="04">
+    <div class="step">04 / EXECUTE</div>
+    <div>
+      <h2 id="execute-title">実行用ウォレットから1回だけ送信</h2>
+      <div id="execute-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="execute-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="wallet" hidden>
+        <fieldset id="wallet-fields">
+          <legend>実行用ウォレット</legend>
+          <div id="wallet-choices"></div>
+        </fieldset>
+        <button id="wallet-connect" type="button" disabled>ウォレットに接続</button>
+        <div id="wallet-pairing" class="pairing" hidden>
+          <canvas id="wallet-qr" width="256" height="256" aria-label="ウォレット接続用QR"></canvas>
+          <a id="wallet-open">ウォレットで開く</a><br>
+        </div>
+        <button id="wallet-cancel" class="secondary" type="button" hidden>ウォレット接続を中止</button>
+        <button id="wallet-switch" type="button" hidden>Polygonに切り替える</button>
+        <button id="wallet-disconnect" class="secondary" type="button" hidden>ウォレットを切断</button>
+        <dl id="wallet-account" hidden></dl>
+      </div>
+      <div id="send-review" hidden>
+        <h3 id="send-heading" tabindex="-1">鍵変更の送信内容</h3>
+        <dl id="send-list"></dl>
+        <p class="confirm" id="send-limits">送信前に送信記録を保存します。保存した送信は、拒否・タイムアウト・不明な応答のあとも再送できず、結果確認だけができます。前払い残高の入金・引出しはこの画面ではできません。</p>
+        <button id="send" type="button" disabled>表示した鍵変更を1回だけ送信</button>
+      </div>
+      <div id="attempt" hidden>
+        <h3 id="attempt-heading" tabindex="-1">送信記録</h3>
+        <dl id="attempt-list"></dl>
+        <form id="hash-form" novalidate hidden>
+          <label for="tx-hash">取引ハッシュ（結果確認のみ・送信しません）</label>
+          <input type="text" id="tx-hash" autocomplete="off" spellcheck="false" aria-describedby="execute-error">
+        </form>
+        <button id="reconcile" class="secondary" type="button" hidden>結果をチェーンで確認</button>
+        <label class="consent" id="rollover-ack-label" hidden><input type="checkbox" id="rollover-ack"><span id="rollover-ack-text"></span></label>
+        <button id="new-change" class="secondary" type="button" hidden>新しい鍵変更を作成</button>
+        <button id="storage-reload" class="secondary" type="button" hidden>送信記録を再読込み</button>
+        <div id="outcome" hidden>
+          <h3 id="outcome-heading" tabindex="-1">チェーンでの確認結果</h3>
+          <dl id="outcome-list"></dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="saved-recovery" aria-label="保存済み結果の回収"></section>
+
+  <footer>署名・送信は自動では要求・再送しません。再読込みで接続・署名・送信権限は復元しません。送信記録はこの端末に残ります。<br>
+    検証結果はローカルの確認であり、iPhoneでの認証方法・Safeのしきい値変更を示しません。<br>
+    <a href="/">配備Web</a> · <a href="safe-request.html">Safe承認要求</a> · <a href="licenses/NOTICES.txt">ライセンスと表示</a> · Portions © 2025 Reown, Inc. All Rights Reserved</footer>
+</main>
+</body>
+</html>

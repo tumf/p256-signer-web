@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>P-256 Signer — Safe承認要求</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="safe-request.js"></script>
+</head>
+<body>
+<header><strong>P-256 / SIGNER</strong><span>Safe承認要求 · Polygon</span></header>
+<main aria-busy="false">
+  <div class="intro">
+    <div>
+      <span class="eyebrow">ONE SAFE. ONE NATIVE TRANSFER.</span>
+      <h1>Safe送金の承認を、iPhoneに要求する。</h1>
+      <p>Polygon上のSafe v1.5.0から、ネイティブPOLを送る1件の取引だけをiPhoneに要求します。秘密鍵はiPhoneから出ません。</p>
+    </div>
+    <p class="notice">このページは返された署名をブラウザで検証するだけです。<br><strong>取引の送信・実行やSafe側の受理は行いません。</strong></p>
+  </div>
+
+  <section aria-labelledby="signer-title">
+    <div class="step">01 / PUBLIC SIGNER</div>
+    <div>
+      <h2 id="signer-title">選んだSignerを確認</h2>
+      <form id="handoff-form" novalidate>
+        <fieldset id="handoff-fields">
+          <label for="handoff">配備データ（v1 JSON）</label>
+          <textarea id="handoff" spellcheck="false" autocomplete="off" aria-describedby="handoff-help handoff-error"
+            placeholder='{"chainId":137,"expectedAddress":"0x…",…,"version":1}'></textarea>
+          <small id="handoff-help">iPhoneアプリの「配備データをコピー」で得た公開データです。公開鍵・アドレス・ソルトの対応を再計算して確認します。</small><br>
+          <button id="handoff-check" type="submit">公開データを確認</button>
+        </fieldset>
+      </form>
+      <div id="handoff-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="signer" hidden>
+        <h3 id="signer-heading" tabindex="-1">選んだSigner（読取り専用）</h3>
+        <p class="address" id="signer-address"></p>
+        <dl>
+          <dt>公開鍵</dt><dd class="mono" id="signer-key"></dd>
+          <dt>keyID</dt><dd class="mono" id="signer-keyid"></dd>
+          <dt>ソルト</dt><dd class="mono" id="signer-salt"></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="transfer-title">
+    <div class="step">02 / TRANSFER</div>
+    <div>
+      <h2 id="transfer-title">送金内容を入力して接続</h2>
+      <form id="transfer-form" novalidate>
+        <fieldset id="transfer-fields">
+          <legend>iPhoneでも同じ内容を独立に設定してください</legend>
+          <label for="safe">Safeアドレス</label>
+          <input type="text" id="safe" autocomplete="off" spellcheck="false" aria-describedby="transfer-error">
+          <label for="recipient">送金先アドレス</label>
+          <input type="text" id="recipient" autocomplete="off" spellcheck="false" aria-describedby="transfer-error">
+          <label for="value">金額（wei、10進整数）</label>
+          <input type="text" id="value" inputmode="numeric" autocomplete="off" spellcheck="false" aria-describedby="value-help transfer-error">
+          <small id="value-help">1 POL = 1000000000000000000 wei。表示時にPOLへ換算します。</small>
+          <label for="nonce">Safe nonce（10進整数）</label>
+          <input type="text" id="nonce" inputmode="numeric" autocomplete="off" spellcheck="false" aria-describedby="transfer-error">
+        </fieldset>
+        <button id="connect" type="submit" disabled>iPhoneに接続</button>
+      </form>
+      <div id="transfer-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="pairing" class="pairing" hidden>
+        <p>iPhoneアプリの「Webからの要求」でこのQRを読み取り、接続を明示的に許可してください。接続URIは自動保存しません。</p>
+        <canvas id="pairing-qr" width="256" height="256" aria-label="iPhone接続用QR"></canvas>
+        <a id="pairing-open">このiPhoneで開く</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="request-title">
+    <div class="step">03 / REQUEST</div>
+    <div>
+      <h2 id="request-title">要求を確認して承認を求める</h2>
+      <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true">公開データを確認してください。</div>
+      <div id="request-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <button id="inspect" type="button" disabled>要求内容を確認</button>
+      <div id="preview" hidden>
+        <h3 id="preview-heading" tabindex="-1">iPhoneに要求する取引（全項目）</h3>
+        <dl id="preview-list"></dl>
+      </div>
+      <button id="sign" type="button" disabled>表示した送金の承認をiPhoneに要求</button>
+      <button id="disconnect" class="secondary" type="button" disabled>切断</button>
+      <div id="result" hidden>
+        <h3 id="result-heading" tabindex="-1">ブラウザ検証済み（未送信・未実行）</h3>
+        <dl id="result-list"></dl>
+        <button id="packet-export" type="button" disabled>検証済み署名packetをファイル保存</button>
+        <p>署名収集画面でこのJSONファイルを選択し、同じSafe・nonce・完全取引と再照合してください。保存は自動では行いません。ファイルには署名が含まれ、ローカルの期限切れ・切断後もチェーンで有効な場合があります。共有先と保管に注意してください。</p>
+        <a href="safe-execute.html">Safe署名収集・準備へ（送信不可）</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="saved-recovery" aria-label="保存済み結果の回収"></section>
+
+  <footer>署名は自動では要求・再送しません。失敗・切断後は新しい接続が必要です。再読込みで接続権限は復元しません。<br>
+    検証済みはブラウザでの署名検証のみを意味し、Safeでの受理・取引実行・iPhoneでの認証方法を示しません。<br>
+    <a href="/">配備Web</a> · <a href="key-change.html">内部鍵の追加・削除</a> · <a href="licenses/NOTICES.txt">ライセンスと表示</a> · Portions © 2025 Reown, Inc. All Rights Reserved</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>P-256 Signer — Safe外部実行の準備（読取り照合・送信不可）</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="safe-execute.js"></script>
+</head>
+<body>
+<header><strong>P-256 / SIGNER</strong><span>Safe外部実行 · 読取り照合・送信不可</span></header>
+<main id="safe-execution">
+  <div class="intro"><div><span class="eyebrow">READ-CHECKED PREPARATION ONLY</span>
+    <h1>Safe取引を照合し、実行用データを準備する。</h1>
+    <p>Polygon / Safe 1.5.0。収集開始・署名追加・準備・書出しの各操作で、入力内容をRPCの同一blockの状態と照合します。不一致や読取り失敗では停止し、未照合の入力へ切り替えません。コントラクトの署名受理は未確認です。</p>
+  </div><p class="notice"><strong>ウォレット接続・署名要求・送信はできません。</strong><br>各操作ボタンが同一originの読取り専用RPC relayを使用します。自動読取り・端末やウォレットへの接続はしません。観測はRPCを信頼するもので、実行成功の証明ではありません。</p></div>
+  <section aria-labelledby="snapshot-title"><div class="step">01 / IMPORTED STATE</div><div>
+    <h2 id="snapshot-title">読取りスナップショット（未検証の公開JSON）</h2>
+    <label for="snapshot">SafeとOwnerの入力</label>
+    <textarea id="snapshot" data-invalidates autocomplete="off" spellcheck="false" aria-describedby="snapshot-help"></textarea>
+    <p id="snapshot-help">READMEのスキーマを使用します。chainId、Safe、Owner全件・鍵、threshold、nonce、外部ガス支払者account、block、generationを固定します。runtimeは必ず「unverified-offline」。guard / modules / fallbackは空のみ。最大8 Owner。入力は配備の証拠になりません。各操作で元blockと前回観測blockを再照合します。取引内容・nonce・Owner・鍵が不変なら新しいblockで照合を継続しますが、元の署名・期限は変更しません。blockの差替え・高度の退行・権限変更・読取り失敗では停止し、収集をやり直してください。</p>
+    <button id="observe" type="button" aria-describedby="observation-help">署名を消去して読取り観測のみ実行</button>
+    <p id="observation-help">上のJSONのSafe・account・Owner鍵を照合し、同一blockの観測を表示します。開始時に収集中の署名・書出しを消去。結果は実行権限やオフライン入力へ自動採用しません。RPCを信頼する観測で、現在も有効・送信可能という証明ではありません。入力変更・停止で表示を消去します。</p>
+    <pre id="observation" class="mono" tabindex="0" aria-label="読取り観測結果" aria-live="polite"></pre>
+    <label for="kind">操作を選択</label>
+    <select id="kind" size="2" class="status" data-invalidates><option value="native" selected>POL送金</option><option value="addOwner">Owner追加</option></select>
+    <label for="recipient">送金先アドレス（送金時のみ）</label><input type="text" id="recipient" data-invalidates autocomplete="off" spellcheck="false">
+    <label for="value">金額（wei、10進整数、送金時のみ）</label><input type="text" id="value" data-invalidates inputmode="numeric" value="1" autocomplete="off">
+    <label for="new-owner">追加Ownerアドレス（Owner追加時のみ）</label><input type="text" id="new-owner" data-invalidates autocomplete="off" spellcheck="false">
+    <label for="new-threshold">変更後threshold（Owner追加時のみ）</label><input type="text" id="new-threshold" data-invalidates inputmode="numeric" autocomplete="off">
+    <label for="confirm" class="consent"><input id="confirm" type="checkbox" data-invalidates>Owner追加と変更後thresholdを明示確認した。承認数は変更前thresholdで判定する。</label>
+    <p>Safe新規作成・Hybridのみで管理されるSafeのOwner追加はこの経路では非対応。送金の全gas/refund項目はゼロ固定。ガス支払者は外部EOAで、内側valueと外側value=0は異なります。</p>
+    <button id="load" type="button">RPCと入力を照合して収集を開始</button>
+    <h3>未署名プレビュー（完全body / H）</h3><pre id="preview" class="mono" tabindex="0"></pre>
+  </div></section>
+  <section aria-labelledby="collect-title"><div class="step">02 / VERIFIED SIGNATURES</div><div>
+    <h2 id="collect-title">Ownerごとの署名を独立検証</h2>
+    <p>署名要求画面で明示保存したpacketファイルを選択できます。ファイル選択だけでは承認を追加しません。「署名を検証して追加」で再検証してください。ページ間の自動受渡しはありません。秘密鍵・seed・接続URIは入力しないでください。</p>
+    <label for="packet-file">署名packetのJSONファイル（1件・最大64KiB）</label>
+    <input id="packet-file" type="file" accept="application/json,.json" disabled aria-describedby="signature-help">
+    <label for="signature">1 Ownerの署名結果JSON</label><textarea id="signature" autocomplete="off" spellcheck="false" aria-describedby="signature-help"></textarea>
+    <p id="signature-help">EOA: owner / signature。Hybrid: owner / expected / context / request / result。公開鍵と完全bodyを再照合しP256署名を検証。収集中の署名はメモリのみ保持し、入力変更・停止・再読込みで消去します。送信要求後の署名入りcalldataは元の取引の読取り照合用に保持します。元の要求期限内・最大120秒で準備します。期限切れや画面を閉じても、すでに外に出た署名のオンチェーン失効にはなりません。</p>
+    <button id="collect" type="button" disabled>署名を検証して追加</button>
+    <button id="prepare" type="button" disabled>選んだ承認で実行データを準備</button>
+    <p>Ownerは重複して数えません。現在の画面ではthresholdと同数だけ読み込んでください。同一iPhone鍵の複数Owner共同承認・複数Ownerの保存署名復旧を解決しません。</p>
+  </div></section>
+  <section aria-labelledby="prepared-title"><div class="step">03 / EXPORT — NOT EXECUTION</div><div>
+    <h2 id="prepared-title">SDK包装した実行用データ</h2>
+    <p>契約署名の動的offsetとcalldataを独立検査します。固定blockのruntime・Owner鍵はRPC応答と照合しますが、ERC1271・Safeの署名受理と実fromは、下の事前シミュレーションで別途観測します。費用・egress制限・実チェーンのreceiptは未検証です。liveVerifiedはfalseのままで、送信可能と判断しないでください。</p>
+    <pre id="prepared" class="mono" tabindex="0"></pre>
+    <button id="preflight" type="button" disabled aria-describedby="preflight-help">POL送金・Owner追加を固定blockで事前シミュレーション</button>
+    <p id="preflight-help">準備したfrom・Safe・calldataを読取り専用eth_callで検査します。署名をRPCへ送るため、信頼するrelayのみ使用してください。結果はそのblockでのRPC観測で、送信許可・実行成功・将来の署名受理の証明ではありません。Owner追加は現在のEOA Ownerの明示承認と変更前thresholdが必要。操作のやり直し・入力変更・停止で結果を消去します。</p>
+    <pre id="preflight-result" class="mono" tabindex="0" aria-label="事前シミュレーション結果" aria-live="polite"></pre>
+    <button id="export" type="button" disabled>署名を含むオフラインJSONを書き出す</button>
+    <label for="fork-profile">隔離fork profile JSON（source / session block・試験専用）</label><textarea id="fork-profile" autocomplete="off" spellcheck="false" aria-describedby="live-gate"></textarea>
+    <button id="execute" type="button" disabled aria-describedby="live-gate">隔離forkウォレットへ1回だけ送信（試験専用）</button>
+    <p id="live-gate">既定・公開チェーンでは送信できません。relayがanvilとして応答し、profileのsource/session blockが完全一致・親子連鎖し、ウォレットが同じchain・from・session blockを報告した場合だけ、固定投影chainId/from/to/value/dataを1回渡します。外側nonce・gas・費用はウォレットが所有。送信要求後はpending / UNKNOWN / SENTの試行と元の取引を保持し、停止・入力変更・収集開始では再送できません。遅れて届くhashも元の取引の読取り照合用に保持します。この保持は同じ画面内のみです。再読込みは未解決の送信を取り消しません。試験ハーネスで照合するまで再送しないでください。実行成功はhashやreceipt statusだけでは判定できません。</p>
+    <pre id="sent" class="mono" tabindex="0" aria-label="送信結果" aria-live="polite"></pre>
+    <button id="reset" type="button">停止して収集中の署名を消去</button>
+  </div></section>
+  <section aria-labelledby="receipt-title"><div class="step">04 / READBACK — NOT FULL ACCEPTANCE</div><div>
+    <h2 id="receipt-title">保持した取引hashの読取り照合</h2>
+    <p>この画面は送信しません。準備した取引と、外部で保持した取引hashを照合します。hashの入力は送信の来歴・試行の所有証明ではありません。receipt・Safeイベント・2 blockの子孫連鎖と、収録直前blockからの期待nonce +1を照合します。同じblock内の別Safe操作は拒否する保守的な照合です。native POL転送は保持した受取先・金額と前後のSafe減額・受取先増額も照合します。差額が期待値と異なる場合は拒否しますが、同じblock内の相殺された変化は識別できません。Owner追加は保持した旧Owner集合・しきい値と、追加後の完全集合・しきい値を照合します。いずれもblock境界のRPC観測で、runtime・取引単位の状態帰属の受入は未完了です。要求期限後も読取りのみ可能です。送信要求前はリセット・取引入力変更で期待取引を消去します。送信要求後は元の期待取引を照合用に保持し、入力を変えても新たな送信は許可しません。</p>
+    <label for="receipt-hash">外部で保持した取引hash（0x付き32 bytes）</label>
+    <input id="receipt-hash" autocomplete="off" spellcheck="false">
+    <button id="check-receipt" type="button" disabled>取引・receipt・イベントを読取り照合</button>
+    <pre id="receipt-result" class="mono" tabindex="0" aria-live="polite"></pre>
+  </div></section>
+  <p id="status" class="status" role="status" aria-live="polite"></p><p id="error" class="status error" role="alert"></p>
+<p>blockが進んでも元の取引・署名・期限は変更しません。元blockと前回観測blockを前後に再照合し、nonce・Owner・鍵などの変更で停止します。これはRPC内の整合性検査であり、チェーンの真正性や送信許可ではありません。</p>
+</main>
+<footer>ローカル実装案。公開配備・標準ウォレット・Safe実行の受入は別判定。<a href="licenses/NOTICES.txt">ライセンス</a></footer>
+</body>
+</html>

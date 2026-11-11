@@ -1,0 +1,1 @@
+{"types":{"Node":[{"name":"label","type":"string"},{"name":"children","type":"Node[]"}]},"primaryType":"Node","domain":{"name":"Tree"},"message":{"label":"root","children":[{"label":"a","children":[{"label":"a1","children":[]}]},{"label":"b","children":[]}]}}

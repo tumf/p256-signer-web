@@ -1,0 +1,28 @@
+{
+  "name": "p256-signer-registration-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Selected-row Signer deployment Web: public v1 import, explicit wallet send, read-only settlement",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test:wallet-fork": "npm run build && node tests/check-wallet-fork.cjs",
+    "test:key-wallet-fork": "npm run build && node tests/check-key-wallet-fork.cjs",
+    "test": "node --test --test-reporter=spec tests/fork-wallet-facade.test.cjs tests/model.test.cjs tests/wallet.test.cjs tests/controller.test.cjs tests/scoped-attempts.test.cjs tests/compact-ui.test.cjs tests/pairing-qr.test.mjs tests/safe-request.test.mjs tests/safe-session.test.mjs tests/safe-page.test.mjs tests/safe-session-packet.test.mjs tests/safe-execute.test.mjs tests/safe-execution-authority.test.mjs tests/safe-execution-judge.test.cjs tests/safe-execution-receipt.test.mjs tests/safe-execution-reader.test.mjs tests/safe-execution-preflight.test.mjs tests/safe-fork-roundtrip.test.mjs"
+  },
+  "dependencies": {
+    "@walletconnect/ethereum-provider": "2.26.0",
+    "@walletconnect/sign-client": "2.26.0",
+    "qrcode": "1.5.4",
+    "@safe-global/protocol-kit": "8.0.7"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "fork-wallet": "file:tests/packages/fork-wallet-0.1.1.tgz",
+    "playwright": "1.56.1"
+  }
+}

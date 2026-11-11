@@ -1,0 +1,2823 @@
+{
+  "version": 1,
+  "authorityRevision": "9c39bc3e9e7aa372ed0fc50ad638655c974d6da0",
+  "rowCount": 156,
+  "childCount": 78,
+  "removedChildIds": [
+    "PF11-gas-invalid",
+    "PF11-fee-invalid",
+    "PF11-overflow",
+    "PF12-unchecked",
+    "PF13-consent-revoked"
+  ],
+  "rows": [
+    {
+      "id": "PF01-initial",
+      "family": "PF01",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF01-initial",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerの公開データを貼り付けて、チェーン情報を確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF01-initial",
+      "family": "PF01",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF01-initial",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerの公開データを貼り付けて、チェーン情報を確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-json",
+      "family": "PF02",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-json",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開データの形式を確認してください（hybrid-key-authority v1）。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-json",
+      "family": "PF02",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-json",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開データの形式を確認してください（hybrid-key-authority v1）。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-point",
+      "family": "PF02",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-point",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開鍵がP-256曲線上の点ではありません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-point",
+      "family": "PF02",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-point",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開鍵がP-256曲線上の点ではありません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-id",
+      "family": "PF02",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-id",
+      "attemptVersion": "2-or-no-record",
+      "message": "keyIDが公開鍵と一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF02-id",
+      "family": "PF02",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF02-id",
+      "attemptVersion": "2-or-no-record",
+      "message": "keyIDが公開鍵と一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF03-reading",
+      "family": "PF03",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF03-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開データとチェーン情報を確認中です。",
+      "actions": "inspect-cancel",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF03-reading",
+      "family": "PF03",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF03-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "公開データとチェーン情報を確認中です。",
+      "actions": "inspect-cancel",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF03-cancelled-late",
+      "family": "PF03",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF03-cancelled-late",
+      "attemptVersion": "2-or-no-record",
+      "message": "確認を中止しました。遅れて届いた結果は使いません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF03-cancelled-late",
+      "family": "PF03",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF03-cancelled-late",
+      "attemptVersion": "2-or-no-record",
+      "message": "確認を中止しました。遅れて届いた結果は使いません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-rpc",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-rpc",
+      "attemptVersion": "2-or-no-record",
+      "message": "チェーン情報を確認できません。時間をおいて再確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-rpc",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-rpc",
+      "attemptVersion": "2-or-no-record",
+      "message": "チェーン情報を確認できません。時間をおいて再確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-chain",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-chain",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-ep-runtime",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-ep-runtime",
+      "attemptVersion": "2-or-no-record",
+      "message": "EntryPointの実行コードが固定値と一致しません。入金できません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-ep-runtime",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-ep-runtime",
+      "attemptVersion": "2-or-no-record",
+      "message": "EntryPointの実行コードが固定値と一致しません。入金できません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-signer-runtime",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-signer-runtime",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-undeployed",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-undeployed",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-membership",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-membership",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-stale",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-stale",
+      "attemptVersion": "2-or-no-record",
+      "message": "チェーン情報が古いか時刻が一致しません。再確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-stale",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-stale",
+      "attemptVersion": "2-or-no-record",
+      "message": "チェーン情報が古いか時刻が一致しません。再確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-partial-keys",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-partial-keys",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-block-reorg",
+      "family": "PF04",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF04-block-reorg",
+      "family": "PF04",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF04-mismatch",
+      "attemptVersion": "2-or-no-record",
+      "message": "Signerを確認できません。配備・鍵・EntryPoint・チェーンが一致しません。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-blank-fee",
+      "family": "PF05",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-blank-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "鍵操作の手数料上限 maxFeePerGas（Gwei）を入力してください。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-blank-fee",
+      "family": "PF05",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-blank-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "鍵操作の手数料上限 maxFeePerGas（Gwei）を入力してください。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-format-fee",
+      "family": "PF05",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-format-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "Gweiは小数9桁までの半角数値で入力してください。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-format-fee",
+      "family": "PF05",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-format-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "Gweiは小数9桁までの半角数値で入力してください。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-overflow-fee",
+      "family": "PF05",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-overflow-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "手数料上限が許可された数値範囲を超えています。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF05-overflow-fee",
+      "family": "PF05",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF05-overflow-fee",
+      "attemptVersion": "2-or-no-record",
+      "message": "手数料上限が許可された数値範囲を超えています。",
+      "actions": "fee",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF06-sufficient",
+      "family": "PF06",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF06-sufficient",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高は足りています。入金は不要です。鍵変更の画面で再確認してください。",
+      "actions": "refresh; return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF06-sufficient",
+      "family": "PF06",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF06-sufficient",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高は足りています。入金は不要です。鍵変更の画面で再確認してください。",
+      "actions": "refresh; return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF07-shortage",
+      "family": "PF07",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF07-shortage",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高が不足しています。入金するウォレットを選んでください。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF07-shortage",
+      "family": "PF07",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF07-shortage",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高が不足しています。入金するウォレットを選んでください。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF07-shortage-text200",
+      "family": "PF07",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF07-shortage",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高が不足しています。入金するウォレットを選んでください。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF07-shortage-text200",
+      "family": "PF07",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF07-shortage",
+      "attemptVersion": "2-or-no-record",
+      "message": "前払い残高が不足しています。入金するウォレットを選んでください。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF08-no-provider",
+      "family": "PF08",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF08-no-provider",
+      "attemptVersion": "2-or-no-record",
+      "message": "利用できるウォレット接続がありません。入金できません。",
+      "actions": "none (unavailable)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF08-no-provider",
+      "family": "PF08",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF08-no-provider",
+      "attemptVersion": "2-or-no-record",
+      "message": "利用できるウォレット接続がありません。入金できません。",
+      "actions": "none (unavailable)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF08-missing-project",
+      "family": "PF08",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF08-missing-project",
+      "attemptVersion": "2-or-no-record",
+      "message": "WalletConnect設定未準備のため、利用できるウォレット接続がありません。",
+      "actions": "none (unavailable)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF08-missing-project",
+      "family": "PF08",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF08-missing-project",
+      "attemptVersion": "2-or-no-record",
+      "message": "WalletConnect設定未準備のため、利用できるウォレット接続がありません。",
+      "actions": "none (unavailable)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-pairing",
+      "family": "PF09",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-pairing",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで接続を承認してください。",
+      "actions": "wallet-cancel; wallet-open",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-pairing",
+      "family": "PF09",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-pairing",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで接続を承認してください。",
+      "actions": "wallet-cancel; wallet-open",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-cancelled",
+      "family": "PF09",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-cancelled",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレット接続を中止しました。もう一度接続できます。",
+      "actions": "wallet-connect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-cancelled",
+      "family": "PF09",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-cancelled",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレット接続を中止しました。もう一度接続できます。",
+      "actions": "wallet-connect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-rejected",
+      "family": "PF09",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで接続が拒否されました。",
+      "actions": "wallet-connect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF09-rejected",
+      "family": "PF09",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF09-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで接続が拒否されました。",
+      "actions": "wallet-connect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF10-wrong-chain",
+      "family": "PF10",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF10-wrong-chain",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金用ウォレットをPolygonに切り替えてください。",
+      "actions": "wallet-switch",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF10-wrong-chain",
+      "family": "PF10",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF10-wrong-chain",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金用ウォレットをPolygonに切り替えてください。",
+      "actions": "wallet-switch",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF10-switch-rejected",
+      "family": "PF10",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF10-switch-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "自動切替できません。ウォレット側でPolygonを選択してください。",
+      "actions": "wallet-switch",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF10-switch-rejected",
+      "family": "PF10",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF10-switch-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "自動切替できません。ウォレット側でPolygonを選択してください。",
+      "actions": "wallet-switch",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF11-balance-short",
+      "family": "PF11",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF11-balance-short",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレット残高が入金額に足りません。",
+      "actions": "wallet-error; wallet-disconnect; refresh via inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF11-balance-short",
+      "family": "PF11",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF11-balance-short",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレット残高が入金額に足りません。",
+      "actions": "wallet-error; wallet-disconnect; refresh via inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-checked",
+      "family": "PF12",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-checked",
+      "family": "PF12",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-focus",
+      "family": "PF12",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-focus",
+      "family": "PF12",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-pressed",
+      "family": "PF12",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-pressed",
+      "family": "PF12",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-disabled",
+      "family": "PF12",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "wallet-choice; wallet-connect (send disabled)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-disabled",
+      "family": "PF12",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "wallet-choice; wallet-connect (send disabled)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-text200",
+      "family": "PF12",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF12-text200",
+      "family": "PF12",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF12-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金内容を確認し、表示した入金を1回だけ送信してください。",
+      "actions": "send",
+      "sendEnabled": true,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-reading",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前にチェーン情報を再確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-reading",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前にチェーン情報を再確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-nonce-wait",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-nonce-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前の参照情報を確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-nonce-wait",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-nonce-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前の参照情報を確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-cas-wait",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-cas-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-cas-wait",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-cas-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-fee-changed",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-fee-changed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入力が変わったため送信を中止しました。ウォレットは呼び出していません。",
+      "actions": "fee; fresh review (explicit send when ready)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-fee-changed",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-fee-changed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入力が変わったため送信を中止しました。ウォレットは呼び出していません。",
+      "actions": "fee; fresh review (explicit send when ready)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-wallet-lost",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-wallet-lost",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットが変わったため送信を中止しました。ウォレットは呼び出していません。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-wallet-lost",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF13-wallet-lost",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットが変わったため送信を中止しました。ウォレットは呼び出していません。",
+      "actions": "wallet-choice",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-reduced-motion",
+      "family": "PF13",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": true,
+      "controllerRow": "PF13-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前にチェーン情報を再確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF13-reduced-motion",
+      "family": "PF13",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": true,
+      "controllerRow": "PF13-reading",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信前にチェーン情報を再確認しています。",
+      "actions": "none while busy",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF14-reserved",
+      "family": "PF14",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF14-reserved",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しました。ウォレットの状態を確認しています。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF14-reserved",
+      "family": "PF14",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF14-reserved",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しました。ウォレットの状態を確認しています。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF14-wallet-wait",
+      "family": "PF14",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF14-wallet-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しました。ウォレットの応答を待っています。再送しません。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF14-wallet-wait",
+      "family": "PF14",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF14-wallet-wait",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を保存しました。ウォレットの応答を待っています。再送しません。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-rejected",
+      "family": "PF15",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで拒否されたか、結果が不明です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-rejected",
+      "family": "PF15",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-rejected",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットで拒否されたか、結果が不明です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-error",
+      "family": "PF15",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-error",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信結果は不明です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-error",
+      "family": "PF15",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-error",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信結果は不明です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-timeout",
+      "family": "PF15",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-timeout",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットの応答がありません。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-timeout",
+      "family": "PF15",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-timeout",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットの応答がありません。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-malformed-hash",
+      "family": "PF15",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-malformed-hash",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットの応答が不正です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-malformed-hash",
+      "family": "PF15",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-malformed-hash",
+      "attemptVersion": "2-or-no-record",
+      "message": "ウォレットの応答が不正です。再送せず、取引ハッシュで確認してください。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-late-hash",
+      "family": "PF15",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-late-hash",
+      "attemptVersion": "2-or-no-record",
+      "message": "元の送信の取引ハッシュを受け取りました。結果を確認してください。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF15-late-hash",
+      "family": "PF15",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF15-late-hash",
+      "attemptVersion": "2-or-no-record",
+      "message": "元の送信の取引ハッシュを受け取りました。結果を確認してください。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF16-hash-no-receipt",
+      "family": "PF16",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF16-hash-no-receipt",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引の確定待ちです。入金はまだ確認していません。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF16-hash-no-receipt",
+      "family": "PF16",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF16-hash-no-receipt",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引の確定待ちです。入金はまだ確認していません。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF16-one-confirmation",
+      "family": "PF16",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF16-one-confirmation",
+      "attemptVersion": "2-or-no-record",
+      "message": "1 / 2 承認。まだ入金成功とは判定していません。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF16-one-confirmation",
+      "family": "PF16",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF16-one-confirmation",
+      "attemptVersion": "2-or-no-record",
+      "message": "1 / 2 承認。まだ入金成功とは判定していません。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF17-outer-failed",
+      "family": "PF17",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF17-outer-failed",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引は失敗しました。入金はされていません。",
+      "actions": "reconcile; new-funding (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF17-outer-failed",
+      "family": "PF17",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF17-outer-failed",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引は失敗しました。入金はされていません。",
+      "actions": "reconcile; new-funding (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-foreign-tuple",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-foreign-tuple",
+      "attemptVersion": "2-or-no-record",
+      "message": "保存した送信内容と取引が一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-foreign-tuple",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-foreign-tuple",
+      "attemptVersion": "2-or-no-record",
+      "message": "保存した送信内容と取引が一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-foreign-log",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-foreign-log",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金イベント以外の記録が含まれています。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-foreign-log",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-foreign-log",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金イベント以外の記録が含まれています。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-absent-event",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-absent-event",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引は成功しましたが、入金イベントを確認できません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-absent-event",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-absent-event",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引は成功しましたが、入金イベントを確認できません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-duplicate-event",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-duplicate-event",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金イベントが重複しています。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-duplicate-event",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-duplicate-event",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金イベントが重複しています。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-wrong-cost",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-wrong-cost",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引と受領記録の費用情報が一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-wrong-cost",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-wrong-cost",
+      "attemptVersion": "2-or-no-record",
+      "message": "取引と受領記録の費用情報が一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-runtime",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-runtime",
+      "attemptVersion": "2-or-no-record",
+      "message": "EntryPointの実行コードを確認できません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-runtime",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-runtime",
+      "attemptVersion": "2-or-no-record",
+      "message": "EntryPointの実行コードを確認できません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-reorg",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-reorg",
+      "attemptVersion": "2-or-no-record",
+      "message": "ブロックの変更を検出しました。結果は未確定です。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-reorg",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-reorg",
+      "attemptVersion": "2-or-no-record",
+      "message": "ブロックの変更を検出しました。結果は未確定です。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-nonce",
+      "family": "PF18",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-nonce",
+      "attemptVersion": "1",
+      "message": "ウォレットのnonceが保存した値と一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF18-nonce",
+      "family": "PF18",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF18-nonce",
+      "attemptVersion": "1",
+      "message": "ウォレットのnonceが保存した値と一致しません。結果を採用しません。",
+      "actions": "reconcile only",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF19-success-ready",
+      "family": "PF19",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF19-success-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の前払い残高は足りています。鍵変更の画面で再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF19-success-ready",
+      "family": "PF19",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF19-success-ready",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の前払い残高は足りています。鍵変更の画面で再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-consumed",
+      "family": "PF20",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-consumed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-consumed",
+      "family": "PF20",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-consumed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-read-failed",
+      "family": "PF20",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-read-failed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-read-failed",
+      "family": "PF20",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-read-failed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-authority-changed",
+      "family": "PF20",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-authority-changed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-authority-changed",
+      "family": "PF20",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF20-authority-changed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-text200",
+      "family": "PF20",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF20-consumed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF20-text200",
+      "family": "PF20",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 2,
+      "reducedMotion": false,
+      "controllerRow": "PF20-consumed",
+      "attemptVersion": "2-or-no-record",
+      "message": "入金取引を検証しました。現在の鍵変更に必要な残高は再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-unavailable",
+      "family": "PF21",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-unavailable",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を安全に保存できません。送信できません。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-unavailable",
+      "family": "PF21",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-unavailable",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を安全に保存できません。送信できません。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-blocked",
+      "family": "PF21",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-blocked",
+      "attemptVersion": "2-or-no-record",
+      "message": "別の画面が送信記録を使用中です。送信できません。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-blocked",
+      "family": "PF21",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-blocked",
+      "attemptVersion": "2-or-no-record",
+      "message": "別の画面が送信記録を使用中です。送信できません。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-corrupt",
+      "family": "PF21",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-corrupt",
+      "attemptVersion": "2-or-no-record",
+      "message": "保存済み送信記録が不正です。上書きせず停止しました。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-corrupt",
+      "family": "PF21",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-corrupt",
+      "attemptVersion": "2-or-no-record",
+      "message": "保存済み送信記録が不正です。上書きせず停止しました。",
+      "actions": "none (locked)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-cas-conflict",
+      "family": "PF21",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-conflict",
+      "attemptVersion": "2-or-no-record",
+      "message": "別の画面が送信記録を更新しました。再送せず確認してください。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF21-cas-conflict",
+      "family": "PF21",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF21-conflict",
+      "attemptVersion": "2-or-no-record",
+      "message": "別の画面が送信記録を更新しました。再送せず確認してください。",
+      "actions": "storage-reload",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-reserved",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-reserved",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-reserved",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-reserved",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-hashKnown",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-hashKnown",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-hashKnown",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-hashKnown",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-terminal",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-terminal",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。チェーンで再確認するまで結果は確定しません。",
+      "actions": "reconcile; new-funding only for terminal status (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-terminal",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-terminal",
+      "attemptVersion": "2-or-no-record",
+      "message": "送信記録を復元しました。チェーンで再確認するまで結果は確定しません。",
+      "actions": "reconcile; new-funding only for terminal status (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF23-new-attempt",
+      "family": "PF23",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF23-new-attempt",
+      "attemptVersion": "2-or-no-record",
+      "message": "新しい入金を始めます。公開データからもう一度確認してください。",
+      "actions": "authority; inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF23-new-attempt",
+      "family": "PF23",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF23-new-attempt",
+      "attemptVersion": "2-or-no-record",
+      "message": "新しい入金を始めます。公開データからもう一度確認してください。",
+      "actions": "authority; inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF24-link",
+      "family": "PF24",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "key-change",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "KW09",
+      "attemptVersion": "none",
+      "message": "前払い残高が不足しています。この画面では入金しません。別の入金画面で入金した後、ここで公開データから再確認してください。",
+      "actions": "prefund-link (secondary)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "key-change.html/key-change.js/key-controller.js (unchanged)"
+    },
+    {
+      "id": "PF24-link",
+      "family": "PF24",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "key-change",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "KW09",
+      "attemptVersion": "none",
+      "message": "前払い残高が不足しています。この画面では入金しません。別の入金画面で入金した後、ここで公開データから再確認してください。",
+      "actions": "prefund-link (secondary)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "key-change.html/key-change.js/key-controller.js (unchanged)"
+    },
+    {
+      "id": "PF24-return-inspect",
+      "family": "PF24",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "key-change",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "KW01",
+      "attemptVersion": "none",
+      "message": "公開データを読み込んで確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "key-change.html/key-change.js/key-controller.js (unchanged)"
+    },
+    {
+      "id": "PF24-return-inspect",
+      "family": "PF24",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "key-change",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "KW01",
+      "attemptVersion": "none",
+      "message": "公開データを読み込んで確認してください。",
+      "actions": "inspect",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "key-change.html/key-change.js/key-controller.js (unchanged)"
+    },
+    {
+      "id": "PF22-v1-reserved",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-reserved",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-v1-reserved",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-reserved",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "tx-hash; reconcile only after valid hash",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-v1-hashKnown",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-hashKnown",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-v1-hashKnown",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-hashKnown",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。送信権限は復元せず、結果確認だけを行います。",
+      "actions": "reconcile",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-v1-terminal",
+      "family": "PF22",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-terminal",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。チェーンで再確認するまで結果は確定しません。",
+      "actions": "reconcile; new-funding only for terminal status (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF22-v1-terminal",
+      "family": "PF22",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF22-terminal",
+      "attemptVersion": "1",
+      "message": "送信記録を復元しました。チェーンで再確認するまで結果は確定しません。",
+      "actions": "reconcile; new-funding only for terminal status (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF19-v1-success-ready",
+      "family": "PF19",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF19-success-ready",
+      "attemptVersion": "1",
+      "message": "入金取引を検証しました。現在の前払い残高は足りています。鍵変更の画面で再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF19-v1-success-ready",
+      "family": "PF19",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF19-success-ready",
+      "attemptVersion": "1",
+      "message": "入金取引を検証しました。現在の前払い残高は足りています。鍵変更の画面で再確認してください。",
+      "actions": "reconcile; new-funding (reverify); return-link",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF17-v1-outer-failed",
+      "family": "PF17",
+      "viewport": [
+        390,
+        844
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF17-outer-failed",
+      "attemptVersion": "1",
+      "message": "取引は失敗しました。入金はされていません。ガス代は発生しています。",
+      "actions": "reconcile; new-funding (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    },
+    {
+      "id": "PF17-v1-outer-failed",
+      "family": "PF17",
+      "viewport": [
+        1280,
+        900
+      ],
+      "owner": "prefund",
+      "textScale": 1,
+      "reducedMotion": false,
+      "controllerRow": "PF17-outer-failed",
+      "attemptVersion": "1",
+      "message": "取引は失敗しました。入金はされていません。ガス代は発生しています。",
+      "actions": "reconcile; new-funding (reverify)",
+      "sendEnabled": false,
+      "evidenceClass": "repository-local Chromium",
+      "productionOwner": "prefund.html/prefund.js/PrefundController; styles.css (unchanged)"
+    }
+  ]
+}

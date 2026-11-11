@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>P-256 Signer — 前払い残高を入金</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="prefund.js"></script>
+</head>
+<body>
+<header><strong>P-256 / SIGNER</strong><span>EntryPoint前払い残高 · Polygon</span></header>
+<main aria-busy="false" data-page="prefund">
+  <div class="intro">
+    <div>
+      <span class="eyebrow">ONE SIGNER. ONE EXACT DEPOSIT.</span>
+      <h1>前払い残高を入金</h1>
+      <p>Signerの鍵操作に使うEntryPointの前払い残高（デポジット）へ、不足額だけを1回入金します。入金先はSignerで、運営者の手数料ではありません。</p>
+    </div>
+    <p class="notice">選んだウォレットから<code>depositTo(signer)</code>を1回だけ送ります。<br><strong>iPhoneへの署名要求・鍵の変更・自動送信・再送はしません。</strong></p>
+  </div>
+
+  <section aria-labelledby="signer-title" data-section="01">
+    <div class="step">01 / SIGNER</div>
+    <div>
+      <h2 id="signer-title">Signerの公開データを確認</h2>
+      <div id="signer-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="signer-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <form id="authority-form" novalidate>
+        <label for="authority">Signerの公開データ（hybrid-<wbr>key-<wbr>authority）</label>
+        <textarea id="authority" spellcheck="false" autocomplete="off" aria-describedby="authority-help signer-error"
+          placeholder='{"v":"1","kind":"hybrid-key-authority","chainId":"137","signer":"0x…",…}'></textarea>
+        <small id="authority-help">iPhoneアプリで選んだSignerの公開データを貼り付けます。URLや以前の画面からは読み込みません。曲線上の点・ID・配備済みSigner・全鍵とEntryPointの実行コードを独立に確認します。</small><br>
+        <button id="inspect" type="submit">公開データとチェーン情報を確認</button>
+        <button id="inspect-cancel" class="secondary" type="button" hidden>確認を中止</button>
+      </form>
+      <div id="signer" hidden>
+        <h3 id="signer-heading" tabindex="-1">確認したSigner（読取り専用）</h3>
+        <p class="address" id="signer-address"></p>
+        <dl id="signer-list"></dl>
+        <p id="signer-note">前払い残高への入金は鍵の追加・削除ではありません。</p>
+      </div>
+      <a id="back-link" class="choice" href="key-change.html">鍵変更の画面へ戻る（公開データは引き継ぎません）</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="deposit-title" data-section="02">
+    <div class="step">02 / DEPOSIT</div>
+    <div>
+      <h2 id="deposit-title">必要な前払いと不足額</h2>
+      <div id="deposit-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="deposit-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <form id="fee-form" novalidate>
+        <fieldset id="fee-fields" disabled>
+          <label for="fee">鍵操作の手数料上限 max<wbr>Fee<wbr>Per<wbr>Gas（Gwei）</label>
+          <input type="text" id="fee" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="fee-help deposit-error">
+          <small id="fee-help">鍵変更の画面で署名する手数料上限と同じ値を入力します。自動入力しません。必要な前払いは1060000ガス×この上限です。</small>
+        </fieldset>
+      </form>
+      <div id="deposit" hidden>
+        <h3 id="deposit-heading">Signerのデポジット（ブロックB時点）</h3>
+        <dl id="deposit-list"></dl>
+      </div>
+      <p id="custody" class="status warning" hidden>未使用分はSignerのデポジットに残ります。この画面では出金できません。出金には別のSigner承認操作が必要です。</p>
+      <button id="refresh" class="secondary" type="button" hidden>チェーン情報を再確認</button>
+    </div>
+  </section>
+
+  <section aria-labelledby="wallet-title" data-section="03">
+    <div class="step">03 / WALLET</div>
+    <div>
+      <h2 id="wallet-title">入金するウォレット</h2>
+      <div id="wallet-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="wallet-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="wallet" hidden>
+        <fieldset id="wallet-fields">
+          <legend>入金するウォレット</legend>
+          <div id="wallet-choices"></div>
+        </fieldset>
+        <button id="wallet-connect" type="button" disabled>ウォレットに接続</button>
+        <div id="wallet-pairing" class="pairing" hidden>
+          <canvas id="wallet-qr" width="256" height="256" aria-label="ウォレット接続用QR"></canvas>
+          <a id="wallet-open" class="choice">ウォレットで開く</a>
+        </div>
+        <button id="wallet-cancel" class="secondary" type="button" hidden>ウォレット接続を中止</button>
+        <button id="wallet-switch" type="button" hidden>Polygonに切り替える</button>
+        <button id="wallet-disconnect" class="secondary" type="button" hidden>ウォレットを切断</button>
+        <dl id="wallet-account" hidden></dl>
+      </div>
+      <div id="review" hidden>
+        <h3 id="review-heading" tabindex="-1">送信内容と入金額</h3>
+        <dl id="review-list"></dl>
+        <p class="confirm">送信前に送信記録を保存します。保存した送信は、拒否・タイムアウト・不明な応答のあとも再送できず、取引ハッシュでの結果確認だけができます。</p>
+        <button id="send" type="button" disabled>表示した入金を1回だけ送信</button>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="result-title" data-section="04">
+    <div class="step">04 / RESULT</div>
+    <div>
+      <h2 id="result-title">送信記録と入金結果</h2>
+      <div id="result-status" class="status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+      <div id="result-error" class="status error" role="alert" tabindex="-1" hidden></div>
+      <div id="attempt" hidden>
+        <h3 id="attempt-heading" tabindex="-1">送信記録</h3>
+        <dl id="attempt-list"></dl>
+        <form id="hash-form" novalidate hidden>
+          <label for="tx-hash">取引ハッシュ（結果確認のみ・送信しません）</label>
+          <input type="text" id="tx-hash" autocomplete="off" spellcheck="false" aria-describedby="hash-help result-error">
+          <small id="hash-help">この端末とブラウザの画面同士だけを調整します。別のプロファイルや端末からの送信は確認できないため、記録の削除やブラウザデータの消去で再送できるようにはしません。</small>
+        </form>
+        <button id="reconcile" class="secondary" type="button" hidden>結果をチェーンで確認</button>
+        <button id="new-funding" class="secondary" type="button" hidden>新しい入金を始める</button>
+        <button id="storage-reload" class="secondary" type="button" hidden>送信記録を再読込み</button>
+        <div id="outcome" hidden>
+          <h3 id="outcome-heading" tabindex="-1">チェーンでの確認結果</h3>
+          <dl id="outcome-list"></dl>
+        </div>
+        <div id="current" hidden>
+          <h3 id="current-heading">現在の前払い残高（入金取引の検証とは別）</h3>
+          <dl id="current-list"></dl>
+        </div>
+      </div>
+      <a id="return-link" class="choice" href="key-change.html" hidden>鍵変更の画面で公開データから再確認する</a>
+    </div>
+  </section>
+
+  <footer>入金は自動では送信・再送しません。再読込みで接続・送信権限は復元しません。送信記録はこの端末に残ります。<br>
+    検証結果はローカルの確認であり、鍵変更の成功や今後の手数料を保証しません。<br>
+    <a href="key-change.html">内部鍵の追加・削除</a> · <a href="/">配備Web</a> · <a href="licenses/NOTICES.txt">ライセンスと表示</a> · Portions © 2025 Reown, Inc. All Rights Reserved</footer>
+</main>
+</body>
+</html>

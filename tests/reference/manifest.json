@@ -1,0 +1,9 @@
+{
+  "revision": "432c0935af52fc940b9148dd897a916258b9a64f",
+  "sourcePath": "spikes/registration-web/",
+  "files": {
+    "index.html": "e5fac37c2458083695515a1edb83ebbde4fc5d1170b26e1ee4f65a0285c3c021",
+    "ui.js": "b0d04d6026d6cc7cec4727fe562100955b11a5e3623d2713e01f0ff0aabcdf0b"
+  },
+  "role": "Read-only visual authority for inherited styles, copied unmodified from Git objects. Not a production route; never regenerated from the implementation. design.md section 8 overrides (680px breakpoint, new states) take precedence."
+}
