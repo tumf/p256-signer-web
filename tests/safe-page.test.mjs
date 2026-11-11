@@ -71,7 +71,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const app = path.resolve(here, '..');
 const ORIGIN = 'https://tumf.github.io';
 const DEPLOYMENT_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; "
-  + "connect-src 'self' wss://relay.walletconnect.com https://relay.walletconnect.com; "
+  + "connect-src 'self' https://p256-signer.mini.tumf.dev wss://relay.walletconnect.com https://relay.walletconnect.com; "
   + "base-uri 'none'; frame-ancestors 'none'; form-action 'none'; object-src 'none'";
 let dist, server, port, browser, harness;
 

@@ -155,13 +155,14 @@ const csp = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 's
   + "frame-src https://verify.walletconnect.org https://verify.walletconnect.com; "
   + "base-uri 'none'; form-action 'none'; object-src 'none'";
 for (const name of pages) {
+  const pageCSP = name === 'index.html' || name === 'prefund.html' ? csp.replace(/frame-src [^;]+;/, '') : csp;
   writeFileSync(path.join(dist, name), read(name).toString().replace('<meta charset="utf-8">',
-    '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="' + csp + '">'));
+    '<meta charset="utf-8">\n<meta http-equiv="Content-Security-Policy" content="' + pageCSP + '">'));
 }
 cpSync(path.join(here, 'styles.css'), path.join(dist, 'styles.css'));
 const projectId = process.env.WALLETCONNECT_PROJECT_ID || '';
-if (!/^[0-9a-f]{32}$/.test(projectId)) fail('WALLETCONNECT_PROJECT_ID must be the public 32-hex project ID');
-writeFileSync(path.join(dist, 'config.json'), JSON.stringify({ walletConnectProjectId: projectId,
+if (projectId && !/^[0-9a-f]{32}$/.test(projectId)) fail('WALLETCONNECT_PROJECT_ID must be the public 32-hex project ID');
+writeFileSync(path.join(dist, 'config.json'), JSON.stringify({ walletConnectProjectId: projectId || null,
   allowedDeploymentOrigin: 'https://tumf.github.io' }));
 writeFileSync(path.join(dist, '.nojekyll'), '');
 const bundled = bundledPackages();

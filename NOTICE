@@ -1,0 +1,7 @@
+Original P-256 Signer Web code: Copyright (c) 2026 tumf. All rights reserved.
+No open-source license is granted for original project code.
+
+Third-party source, bytecode, test fixtures and packages retain their original
+licenses and notices. See licenses.json, vendor/, tests/fixtures/ and the
+build-generated licenses/NOTICES.txt. WalletConnect components use the
+WalletConnect Community License Agreement, not an OSI open-source license.

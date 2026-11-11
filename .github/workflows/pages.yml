@@ -20,7 +20,9 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm test
-      - run: npm run build
+        env:
+          WALLETCONNECT_PROJECT_ID: ${{ vars.WALLETCONNECT_PROJECT_ID }}
+      - run: test -n "$WALLETCONNECT_PROJECT_ID" && npm run build
         env:
           WALLETCONNECT_PROJECT_ID: ${{ vars.WALLETCONNECT_PROJECT_ID }}
       - uses: actions/configure-pages@v5

@@ -18,7 +18,7 @@ WALLETCONNECT_PROJECT_ID=<public-project-id> npm run build
 python3 -m http.server 8080 --directory dist
 ```
 
-The WalletConnect project ID is a public client identifier, not a secret or permission. GitHub Actions reads it from the repository variable `WALLETCONNECT_PROJECT_ID`. The build refuses an absent or malformed ID. Add `https://tumf.github.io` to the WalletConnect project's allowed origins before live pairing.
+The WalletConnect project ID is a public client identifier, not a secret or permission. GitHub Actions reads it from the repository variable `WALLETCONNECT_PROJECT_ID`. The production workflow requires this variable. Local builds without an ID disable WalletConnect; malformed IDs fail the build. Add `https://tumf.github.io` to the WalletConnect project's allowed origins before live pairing.
 
 ## Hosting and trust
 

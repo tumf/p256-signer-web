@@ -1,3 +1,4 @@
+import { relayURL } from './site.js';
 // Non-sending preparation; the product page requires explicit read-only comparison, with no wallet or persistent signatures.
 import ethers from './vendor/ethers.js';
 import { readExecutionReceipt } from './safe-execution-receipt.js';
@@ -374,7 +375,7 @@ export async function safeReadRPC(method, params, fetcher = globalThis.fetch) {
   if (!Number.isSafeInteger(id) || new TextEncoder().encode(body).length > 32768) reject('Read size limit');
   const abort = new AbortController(); let timer, reader, active = true;
   const run = async () => {
-    const response = await fetcher('/rpc', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+    const response = await fetcher(relayURL('/rpc'), { method: 'POST', headers: { 'Content-Type': 'application/json' },
       credentials: 'same-origin', referrerPolicy: 'no-referrer', redirect: 'error', cache: 'no-store', signal: abort.signal, body });
     if (!active || !response.ok || !response.body) reject('Read-only relay unavailable');
     reader = response.body.getReader(); const decoder = new TextDecoder('utf-8', { fatal: true });

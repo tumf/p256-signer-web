@@ -69,7 +69,13 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
     async function open(index, { legacy = null } = {}) {
       const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
       contexts.push(context);
-      await context.route('**/*', (route) => route.request().url().startsWith(origin + '/') ? route.continue() : route.abort());
+      await context.route('**/*', route => {
+        if (route.request().url().startsWith('https://p256-signer.mini.tumf.dev/rpc')) {
+          const body = route.request().postDataJSON();
+          return chain.rpc(body.method, body.params).then(result => route.fulfill({json:{jsonrpc:'2.0',id:body.id,result}}),e=>route.fulfill({json:{jsonrpc:'2.0',id:body.id,error:{code:e.code||-32000,message:e.message}}}));
+        }
+        return route.request().url().startsWith(origin + '/') ? route.continue() : route.abort();
+      });
       const p = await context.newPage();
       p.on('pageerror', (e) => errors.push(e.message));
       const wallet = new FakeWallet(chain, { accounts: ['0x1111111111111111111111111111111111111111'] });
@@ -335,7 +341,7 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
     let holdSwitch = true;
     await recovered.route('**/rpc', async (route) => {
       if (holdSwitch) { holdSwitch = false; reachedSwitch(); await switchGate; }
-      await route.continue();
+      await route.fallback();
     });
     await recovered.goto(origin + '/#registration=' + Buffer.from(handoffs[0]).toString('base64url'));
     await switchStarted;
@@ -365,7 +371,7 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
     let readHeld = false;
     await stale.route('**/rpc', async (route) => {
       const body = route.request().postDataJSON();
-      const response = await route.fetch();
+      const response = await route.fetch({url: origin + '/rpc'});
       if (!readHeld && body.method === 'eth_getBlockByNumber' && body.params[0] !== 'latest') {
         readHeld = true;
         reachedRead();

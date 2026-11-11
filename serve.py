@@ -35,12 +35,12 @@ CHAIN_ENVIRONMENT = {1: ("ETHEREUM_RPC_URL", "https://eth.drpc.org"),
                      8453: ("BASE_RPC_URL", "https://base-rpc.publicnode.com"),
                      84532: ("BASE_SEPOLIA_RPC_URL", "https://base-sepolia-rpc.publicnode.com")}
 CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; "
-       "connect-src 'self' wss://relay.walletconnect.com https://relay.walletconnect.com; "
+       "connect-src 'self' https://p256-signer.mini.tumf.dev wss://relay.walletconnect.com https://relay.walletconnect.com; "
        "base-uri 'none'; frame-ancestors 'none'; form-action 'none'; object-src 'none'")
 # Safe approval and key-change pages only: the pinned SignClient's Verify attestation iframe and its endpoints. The
 # deployment pages keep CSP byte-identical.
 SAFE_CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; "
-            "connect-src 'self' wss://relay.walletconnect.com https://relay.walletconnect.com "
+            "connect-src 'self' https://p256-signer.mini.tumf.dev wss://relay.walletconnect.com https://relay.walletconnect.com "
             "https://verify.walletconnect.org https://verify.walletconnect.com; "
             "frame-src https://verify.walletconnect.org https://verify.walletconnect.com; "
             "base-uri 'none'; frame-ancestors 'none'; form-action 'none'; object-src 'none'")
@@ -256,7 +256,9 @@ def load_assets():
 def public_config():
     project = os.environ.get("WALLETCONNECT_PROJECT_ID", "")
     return {"walletConnectProjectId": project if re.fullmatch(r"[0-9a-f]{32}", project) else None,
-            "allowedDeploymentOrigin": ALLOWED_ORIGIN}
+            "allowedDeploymentOrigin": (os.environ.get("REGISTRATION_CONFIG_ORIGIN")
+                 if os.environ.get("REGISTRATION_CONFIG_ORIGIN") in (ALLOWED_ORIGIN, "https://p256-signer.mini.tumf.dev")
+                 else ALLOWED_ORIGIN)}
 
 
 def operator_chain_upstreams(environ):
