@@ -1,2 +1,4 @@
 node_modules/
 dist/
+artifacts/
+__pycache__/

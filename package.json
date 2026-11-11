@@ -12,7 +12,7 @@
     "build": "node build.mjs",
     "test:wallet-fork": "npm run build && node tests/check-wallet-fork.cjs",
     "test:key-wallet-fork": "npm run build && node tests/check-key-wallet-fork.cjs",
-    "test": "node --test --test-reporter=spec tests/fork-wallet-facade.test.cjs tests/model.test.cjs tests/wallet.test.cjs tests/controller.test.cjs tests/scoped-attempts.test.cjs tests/compact-ui.test.cjs tests/pairing-qr.test.mjs tests/safe-request.test.mjs tests/safe-session.test.mjs tests/safe-page.test.mjs tests/safe-session-packet.test.mjs tests/safe-execute.test.mjs tests/safe-execution-authority.test.mjs tests/safe-execution-judge.test.cjs tests/safe-execution-receipt.test.mjs tests/safe-execution-reader.test.mjs tests/safe-execution-preflight.test.mjs tests/safe-fork-roundtrip.test.mjs"
+    "test": "node --test --test-reporter=spec tests/site.test.mjs tests/fork-wallet-facade.test.cjs tests/model.test.cjs tests/wallet.test.cjs tests/controller.test.cjs tests/scoped-attempts.test.cjs tests/compact-ui.test.cjs tests/pairing-qr.test.mjs tests/safe-request.test.mjs tests/safe-session.test.mjs tests/safe-page.test.mjs tests/safe-session-packet.test.mjs tests/safe-execute.test.mjs tests/safe-execution-authority.test.mjs tests/safe-execution-judge.test.cjs tests/safe-execution-receipt.test.mjs tests/safe-execution-reader.test.mjs tests/safe-execution-preflight.test.mjs tests/safe-fork-roundtrip.test.mjs"
   },
   "dependencies": {
     "@walletconnect/ethereum-provider": "2.26.0",

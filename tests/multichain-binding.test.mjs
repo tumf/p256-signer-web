@@ -203,7 +203,9 @@ test('the wallet target is the parsed chain only: init options, status and the e
   for (const chain of all) {
     const options = walletConnectOptions('0'.repeat(32), 'https://tumf.github.io', undefined, chain);
     assert.deepEqual(options.chains, [chain.id]);
-    assert.deepEqual(options.rpcMap, { [chain.id]: 'https://tumf.github.io' + chain.route });
+    const endpoints = {1:'https://ethereum-rpc.publicnode.com/',137:'https://polygon-bor-rpc.publicnode.com/',
+      8453:'https://base-rpc.publicnode.com/',84532:'https://base-sepolia-rpc.publicnode.com/'};
+    assert.deepEqual(options.rpcMap, { [chain.id]: endpoints[chain.id] });
     assert.deepEqual(options.optionalChains, []);
     // The pairing description names the target chain; Polygon keeps the exact legacy metadata bytes.
     assert.equal(options.metadata.description, chain === POLYGON ? '選んだSignerをPolygonへ配備します'

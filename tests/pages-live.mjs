@@ -9,6 +9,15 @@ const context = await browser.newContext({ acceptDownloads: true });
 try {
   const page = await context.newPage();
   const errors = [];
+  let originRefused = false;
+  const devtools = await context.newCDPSession(page);
+  await devtools.send('Network.enable');
+  devtools.on('Network.webSocketFrameReceived', event => {
+    try {
+      const message = JSON.parse(event.response.payloadData);
+      if (message.error?.code === 3000 && message.error?.message === 'Unauthorized: origin not allowed') originRefused = true;
+    } catch {}
+  });
   page.on('pageerror', e => errors.push(e.message));
   for (const route of ['', 'safe-request.html', 'safe-execute.html', 'key-change.html', 'prefund.html']) {
     const response = await page.goto(base + route);
@@ -28,6 +37,7 @@ try {
     return r.json();
   });
   assert.equal(read.result, '0x89');
+  console.log('PASS: five real HTTPS routes, secure context, static config and browser public RPC read');
   // Open a genuine pending SignClient pairing with a fresh synthetic public handoff.
   const { freshSigner } = await import('./support/safe-fixtures.mjs');
   const signer = await freshSigner();
@@ -39,7 +49,8 @@ try {
   await page.fill('#value', '1');
   await page.fill('#nonce', '0');
   await page.click('#connect');
-  await page.locator('#pairing:visible').waitFor({timeout:30000});
+  try { await page.locator('#pairing:visible').waitFor({timeout:30000}); }
+  catch { throw new Error(originRefused ? 'BLOCKED: Reown project refuses https://tumf.github.io (Unauthorized: origin not allowed)' : 'Pairing did not open'); }
   const canvas = await page.locator('#pairing canvas').getAttribute('id');
   assert.ok(canvas);
   await checkQRDownload(page, canvas);
