@@ -12,10 +12,12 @@ const N = 0xffffffff00000000ffffffffffffffffbce6faada7179e84f3b9cac2fc632551n;
 // Frozen upstream transport artifact: never regenerate expected values from this implementation.
 const source = process.env.SAFE_SESSION_VECTORS || new URL('../fixtures/safe-session-vectors.json', import.meta.url);
 const bytes = readFileSync(source);
-assert.equal(createHash('sha256').update(bytes).digest('hex'), '0de46d2bd2497c833b0aeb5bf00c16f455ea6c42fdfcfa715e89d855ff788596');
+assert.equal(createHash('sha256').update(bytes).digest('hex'), 'f4724d7281738cd2cfb6eb8b44e3777b49d0910f16d0f3c29bc4609ebeda85ce');
 export const v = JSON.parse(bytes);
-// Origin binding migrated; retain upstream signature/envelope bytes unchanged.
-v.context.result.origin = 'https://p256-signer.tumf.dev';
+// Exact independent native fixture: origin, binding, envelope and commitment stay consistent.
+assert.equal(v.context.result.origin, 'https://p256-signer.tumf.dev');
+assert.deepEqual(JSON.parse(v.context.json), v.context.result);
+assert.equal(JSON.parse(v.request.envelope).binding, v.context.result.binding);
 export const envelope = JSON.parse(v.request.envelope);
 const c = v.context.result;
 /** The vector's expected authority (its Signer is a fixture value, not a handoff-derived address). */
