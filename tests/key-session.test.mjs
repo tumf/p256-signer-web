@@ -35,7 +35,7 @@ test('actual SignClient 2.26.0: dedicated prefix, memory storage, required names
   assert.deepEqual(probe.proposals[0].requiredNamespaces, {});
   assert.deepEqual(probe.proposals[0].optionalNamespaces, { eip155: { chains: ['eip155:137'], methods: [...METHODS],
     events: [] } });
-  assert.equal(probe.proposals[0].proposer, 'https://tumf.github.io');
+  assert.equal(probe.proposals[0].proposer, 'https://p256-signer.tumf.dev');
   assert.equal(probe.prefix, STORAGE_PREFIX);
   assert.equal(STORAGE_PREFIX, 'p256.key-change.session.v1');
   assert.ok(probe.storageKeys.length > 0 && probe.storageKeys.every((k) => k.includes(STORAGE_PREFIX)));
@@ -99,7 +99,7 @@ test('invalid full wire is never reconstructed or passed to signing preparation'
 });
 
 test('broadened, foreign, expired or extended sessions are disconnected and never adopted', async () => {
-  const session = (topic) => ({ topic, expiry: now() + 3600, peer: { metadata: { url: 'https://tumf.github.io' } },
+  const session = (topic) => ({ topic, expiry: now() + 3600, peer: { metadata: { url: 'https://p256-signer.tumf.dev' } },
     namespaces: { eip155: { accounts: [`eip155:137:${SIGNER.toLowerCase()}`], methods: [...METHODS], events: [] } } });
   const mutations = {
     method: (x) => x.namespaces.eip155.methods.push('personal_sign'), safe: (x) => { x.namespaces.eip155.methods = ['p256_getSessionContext', 'p256_signSafeRequest']; },

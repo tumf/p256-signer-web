@@ -323,7 +323,7 @@ test('authority admission reuses the closed native parser: malformed, duplicate 
 });
 
 test('bounded WalletConnect metadata override: truthful funding text accepted, malformed input refused, default unchanged', () => {
-  const ORIGIN = 'https://tumf.github.io';
+  const ORIGIN = 'https://p256-signer.tumf.dev';
   assert.deepEqual(walletConnectMetadata(undefined), DEFAULT_METADATA);
   assert.deepEqual(walletConnectOptions('ab'.repeat(16), ORIGIN).metadata, { name: 'P-256 Signer 配備Web',
     description: '選んだSignerをPolygonへ配備します', url: ORIGIN, icons: [] });

@@ -7,7 +7,7 @@ import { POLYGON, chainOf } from './chains.js';
 
 const U = ethers.utils;
 
-export const ORIGIN = 'https://tumf.github.io';
+export const ORIGIN = 'https://p256-signer.tumf.dev';
 // The legacy default chain (Polygon); an anchor names its own closed chain (`anchorChain`).
 export const CHAIN_ID = POLYGON.decimal;
 export const CHAIN_HEX = POLYGON.hex;

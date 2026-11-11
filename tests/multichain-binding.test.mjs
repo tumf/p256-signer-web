@@ -201,7 +201,7 @@ test('the key-context read refuses an RPC answering for another chain before any
 
 test('the wallet target is the parsed chain only: init options, status and the explicit switch', async () => {
   for (const chain of all) {
-    const options = walletConnectOptions('0'.repeat(32), 'https://tumf.github.io', undefined, chain);
+    const options = walletConnectOptions('0'.repeat(32), 'https://p256-signer.tumf.dev', undefined, chain);
     assert.deepEqual(options.chains, [chain.id]);
     const endpoints = {1:'https://ethereum-rpc.publicnode.com/',137:'https://polygon-bor-rpc.publicnode.com/',
       8453:'https://base-rpc.publicnode.com/',84532:'https://base-sepolia-rpc.publicnode.com/'};
@@ -214,7 +214,7 @@ test('the wallet target is the parsed chain only: init options, status and the e
   assert.throws(() => walletConnectOptions('0'.repeat(32), 'x', undefined, { ...POLYGON }));
   const requests = [];
   const wallet = new WalletManager({ win: { addEventListener() {}, removeEventListener() {}, dispatchEvent() {} },
-    config: null, origin: 'https://tumf.github.io', loadWalletConnect: async () => ({}) });
+    config: null, origin: 'https://p256-signer.tumf.dev', loadWalletConnect: async () => ({}) });
   wallet.provider = { request: async ({ method, params }) => { requests.push([method, params]); return method === 'eth_chainId' ? CHAINS[8453].hex : null; } };
   wallet.status = 'connected'; wallet.chainId = POLYGON.hex;
   wallet.setTarget(CHAINS[8453]);

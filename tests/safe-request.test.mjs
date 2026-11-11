@@ -62,7 +62,7 @@ test('expected authority comes from the verified handoff plus independent canoni
   const key = await freshSigner();
   const input = { safe: ` ${c.safe.toLowerCase()} `, recipient: expected.recipient, value: '1000000000000000000', nonce: '7' };
   const e = expectedFrom(key.handoff, input);
-  assert.deepEqual(e, { origin: 'https://tumf.github.io', safe: c.safe, signer: key.handoff.expectedAddress,
+  assert.deepEqual(e, { origin: 'https://p256-signer.tumf.dev', safe: c.safe, signer: key.handoff.expectedAddress,
     publicKey: key.publicKey, keyId: key.keyID, recipient: v.policy.recipient,
     value: '1000000000000000000', nonce: '7' });
   assert.ok(Object.isFrozen(e));

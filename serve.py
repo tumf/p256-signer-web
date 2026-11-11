@@ -20,8 +20,8 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 ROOT = Path(__file__).resolve().parent
 DIST = ROOT / "dist"
 PROXY_SHA256 = "103c4d3815dd2472c4a257bcd94e8b8b49ce39de453add9d8285b749bb926aa7"
-ALLOWED_ORIGIN = "https://tumf.github.io"
-PAGES_ORIGIN = "https://tumf.github.io"
+ALLOWED_ORIGIN = "https://p256-signer.tumf.dev"
+PAGES_ORIGIN = "https://p256-signer.tumf.dev"
 FACTORY = "0x69aa2f9fe1572f1b640e1bbc512f5c3a734fc77c"
 ENTRYPOINT = "0x0000000071727de22e5e9d8baf0edac6f37da032"
 MAX_REQUEST = 32768

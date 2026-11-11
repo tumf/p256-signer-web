@@ -1,6 +1,6 @@
 'use strict';
 // Deterministic browser harness over the BUILT production page served by the real serve.py.
-// - The page origin is the fixed https://tumf.github.io (routed to the loopback server), so the
+// - The page origin is the fixed https://p256-signer.tumf.dev (routed to the loopback server), so the
 //   production WalletConnect origin check passes genuinely; one scenario uses the true loopback origin.
 // - serve.py's only upstream is an in-process read-only chain double; a test-only EIP-1193 provider is
 //   injected with addInitScript and backed by FakeWallet (captures every request, including the real send).
@@ -21,7 +21,7 @@ const { expandAll, expandOriginal, w24Controls } = require('./support/matrix.cjs
 
 const APP = path.resolve(__dirname, '..');
 const ROOT = path.resolve(APP, '../..');
-const ORIGIN = 'https://tumf.github.io';
+const ORIGIN = 'https://p256-signer.tumf.dev';
 const PROJECT = '0123456789abcdef0123456789abcdef';
 const ACCOUNT = '0x1111111111111111111111111111111111111111';
 const OTHER = '0x2222222222222222222222222222222222222222';

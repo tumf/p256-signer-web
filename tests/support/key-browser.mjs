@@ -13,7 +13,7 @@ import { chromium } from 'playwright';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const app = path.resolve(here, '../..');
-export const ORIGIN = 'https://tumf.github.io';
+export const ORIGIN = 'https://p256-signer.tumf.dev';
 export const inventory = JSON.parse(readFileSync(path.join(app, 'tests/key-ui-inventory.json')));
 let dist, server, port, browser, harness;
 

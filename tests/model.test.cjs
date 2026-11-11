@@ -51,7 +51,7 @@ test('fresh Swift RegistrationHandoff output decodes to the same real calldata a
   let nonzero = 0;
   for (const row of output.rows) {
     const url = new URL(row.url);
-    assert.equal(url.origin + url.pathname, 'https://tumf.github.io/p256-signer-web/');
+    assert.equal(url.origin + url.pathname, 'https://p256-signer.tumf.dev/');
     assert.equal(url.search, '');
     const fromFragment = m.parseFragment(url.hash);
     const fromJSON = m.parseHandoff(row.json);
@@ -136,7 +136,7 @@ test('manual JSON import rejects every malformed, extra, duplicate or authority-
     zeroSaltShortcut: [swap('salt', '0x' + '00'.repeat(32)), 'binding'],
     barePoint: [pattern.publicPoint, 'not-v1'],
     pointArray: [JSON.stringify([pattern.publicPoint]), 'not-v1'],
-    url: ['https://tumf.github.io/#registration=' + b64(json), 'not-v1'],
+    url: ['https://p256-signer.tumf.dev/#registration=' + b64(json), 'not-v1'],
     empty: ['', 'json'],
   };
   for (const [name, [text, code]] of Object.entries(cases)) {

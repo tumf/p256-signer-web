@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { readURL, relayURL, SITE_URL } from '../site.js';
 
 test('Pages project path and four fixed public read endpoints are closed', () => {
-  assert.equal(SITE_URL, 'https://tumf.github.io/p256-signer-web/');
+  assert.equal(SITE_URL, 'https://p256-signer.tumf.dev/');
   const endpoints = {
     '/rpc':'https://polygon-bor-rpc.publicnode.com/',
     '/rpc/1':'https://ethereum-rpc.publicnode.com/',

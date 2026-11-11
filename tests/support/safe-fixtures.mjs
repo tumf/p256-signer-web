@@ -15,7 +15,7 @@ const bytes = readFileSync(source);
 assert.equal(createHash('sha256').update(bytes).digest('hex'), '0de46d2bd2497c833b0aeb5bf00c16f455ea6c42fdfcfa715e89d855ff788596');
 export const v = JSON.parse(bytes);
 // Origin binding migrated; retain upstream signature/envelope bytes unchanged.
-v.context.result.origin = 'https://tumf.github.io';
+v.context.result.origin = 'https://p256-signer.tumf.dev';
 export const envelope = JSON.parse(v.request.envelope);
 const c = v.context.result;
 /** The vector's expected authority (its Signer is a fixture value, not a handoff-derived address). */

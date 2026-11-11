@@ -10,7 +10,7 @@
 import { bytesToHex, computeRequest, get, hexToBytes, parseJSON } from './defi-v3.js';
 import { verifyV3Result } from './defi-v3-result.js';
 
-export const BRIDGE_ORIGIN = 'https://tumf.github.io';
+export const BRIDGE_ORIGIN = 'https://p256-signer.tumf.dev';
 export const CHAIN = 'eip155:137';
 export const CHAIN_ID = '137';
 export const SIGN_METHOD = 'p256_signSafeRequestV3';

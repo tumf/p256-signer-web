@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 import { checkQRDownload } from './support/qr-download.mjs';
 
-const base = 'https://tumf.github.io/p256-signer-web/';
+const base = 'https://p256-signer.tumf.dev/';
 const browser = await chromium.launch();
 const context = await browser.newContext({ acceptDownloads: true });
 try {
@@ -35,7 +35,7 @@ try {
   }
   await page.goto(base);
   const config = await page.evaluate(async () => (await fetch('./config.json')).json());
-  assert.equal(config.allowedDeploymentOrigin, 'https://tumf.github.io');
+  assert.equal(config.allowedDeploymentOrigin, 'https://p256-signer.tumf.dev');
   assert.match(config.walletConnectProjectId, /^[0-9a-f]{32}$/);
   for (const [host, chainId] of [['polygon-bor-rpc.publicnode.com','0x89'], ['ethereum-rpc.publicnode.com','0x1'],
       ['base-rpc.publicnode.com','0x2105'], ['base-sepolia-rpc.publicnode.com','0x14a34']]) {
@@ -61,7 +61,7 @@ try {
   await page.fill('#nonce', '0');
   await page.click('#connect');
   try { await page.locator('#pairing:visible').waitFor({timeout:30000}); }
-  catch { throw new Error(originRefused ? 'BLOCKED: Reown project refuses https://tumf.github.io (Unauthorized: origin not allowed)' : 'Pairing did not open'); }
+  catch { throw new Error(originRefused ? 'BLOCKED: Reown project refuses https://p256-signer.tumf.dev (Unauthorized: origin not allowed)' : 'Pairing did not open'); }
   const canvas = await page.locator('#pairing canvas').getAttribute('id');
   assert.ok(canvas);
   await checkQRDownload(page, canvas);

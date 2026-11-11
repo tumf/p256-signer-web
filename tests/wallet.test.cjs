@@ -8,7 +8,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { FakeChain, FakeWallet } = require('./support/fake-chain.cjs');
 
-const ORIGIN = 'https://tumf.github.io';
+const ORIGIN = 'https://p256-signer.tumf.dev';
 const PROJECT = '0123456789abcdef0123456789abcdef';
 const load = () => import('../wallet.js');
 

@@ -13,7 +13,7 @@ import { chromium } from 'playwright';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 export const app = path.resolve(here, '../..');
-export const ORIGIN = 'https://tumf.github.io';
+export const ORIGIN = 'https://p256-signer.tumf.dev';
 export const inventory = JSON.parse(readFileSync(path.join(app, 'tests/fixtures/prefund-ui-inventory.json')));
 /** Literal frozen v1 attempt bytes (never synthesized from a v2 record at runtime). */
 export const v1Fixture = JSON.parse(readFileSync(path.join(app, 'tests/fixtures/prefund-attempt-v1.json')));

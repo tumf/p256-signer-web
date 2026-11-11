@@ -2,7 +2,7 @@
 
 Public browser companion for the independent iPhone P-256 signer.
 
-Site: https://tumf.github.io/p256-signer-web/
+Site: https://p256-signer.tumf.dev/
 
 The iPhone app and its private repository are separate. This repository starts from a source-only Web snapshot; it does not contain the app repository's Git history, app signing credentials, device keys or release artifacts.
 
@@ -18,13 +18,13 @@ WALLETCONNECT_PROJECT_ID=<public-project-id> npm run build
 python3 -m http.server 8080 --directory dist
 ```
 
-The WalletConnect project ID is a public client identifier, not a secret or permission. GitHub Actions reads it from the repository variable `WALLETCONNECT_PROJECT_ID`. The production workflow requires this variable. Local builds without an ID disable WalletConnect; malformed IDs fail the build. Add `https://tumf.github.io` to the WalletConnect project's allowed origins before live pairing.
+The WalletConnect project ID is a public client identifier, not a secret or permission. GitHub Actions reads it from the repository variable `WALLETCONNECT_PROJECT_ID`. The production workflow requires this variable. Local builds without an ID disable WalletConnect; malformed IDs fail the build. Add `https://p256-signer.tumf.dev` to the WalletConnect project's allowed origins before live pairing.
 
 ## Hosting and trust
 
 GitHub Pages serves only `dist/`. All script and QR generation code is local. The HTML includes a restrictive meta CSP and a no-referrer policy. Pages cannot set custom response headers: `frame-ancestors` and header-only controls are not claimed here.
 
-The exact origin is `https://tumf.github.io`; `/p256-signer-web/` is the site path, not an origin. Other projects under that GitHub account share the same browser origin and storage trust boundary. Use a dedicated custom hostname if that shared trust boundary becomes unacceptable.
+The dedicated origin is `https://p256-signer.tumf.dev`, with the site at `/`. DNS is a DNS-only CNAME to `tumf.github.io`; GitHub Pages terminates HTTPS. It no longer shares the `tumf.github.io` browser origin or storage boundary.
 
 Pages cannot run a POST RPC endpoint. The browser reads the four fixed public PublicNode HTTPS endpoints in `site.js`, with no API key, cookies or operator credentials. Client transport admits only the explicit read-method list; wallet submission remains a separate explicit user action. Providers see queried addresses, call data and client IP. Existing chain/code-hash/block validation remains mandatory; RPC responses are untrusted. The Tailscale-only mini service is not a Web dependency. Browser-network protections are not bypassed.
 
@@ -38,7 +38,7 @@ Tests use public contract runtimes and synthetic software-key fixtures. They are
 
 ## Migration status
 
-Pages HTTPS and public RPC reads are live. The existing Reown project currently refuses the new origin (`Unauthorized: origin not allowed`). Add `https://tumf.github.io` to its allowed origins, then require `node tests/pages-live.mjs` to pass before changing the iPhone app URLs. The app has not been switched.
+The custom hostname is being deployed. The previous Pages origin was refused by Reown (`Unauthorized: origin not allowed`). Require live verification of the custom hostname; add `https://p256-signer.tumf.dev` to its allowed origins, then require `node tests/pages-live.mjs` to pass before changing the iPhone app URLs. The app has not been switched.
 
 ## Deployment
 

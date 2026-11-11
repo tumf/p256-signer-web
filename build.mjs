@@ -57,7 +57,7 @@ const bundleOptions = {
   absWorkingDir: here, bundle: true, splitting: true, format: 'esm', outdir: dist,
   platform: 'browser', target: ['es2022'], minify: true, legalComments: 'none', sourcemap: false,
   define: { 'process.env.NODE_ENV': '"production"', global: 'globalThis' },
-  banner: { js: `/*! ${REOWN_NOTICE}. Licenses: https://tumf.github.io/p256-signer-web/licenses/NOTICES.txt */` }, plugins: [noAppKit],
+  banner: { js: `/*! ${REOWN_NOTICE}. Licenses: https://p256-signer.tumf.dev/licenses/NOTICES.txt */` }, plugins: [noAppKit],
   logLevel: 'warning', metafile: true,
 };
 // Deployment, Safe approval, execution preparation and key-change have separate builds: the deployment bundle
@@ -163,8 +163,9 @@ cpSync(path.join(here, 'styles.css'), path.join(dist, 'styles.css'));
 const projectId = process.env.WALLETCONNECT_PROJECT_ID || '';
 if (projectId && !/^[0-9a-f]{32}$/.test(projectId)) fail('WALLETCONNECT_PROJECT_ID must be the public 32-hex project ID');
 writeFileSync(path.join(dist, 'config.json'), JSON.stringify({ walletConnectProjectId: projectId || null,
-  allowedDeploymentOrigin: 'https://tumf.github.io' }));
+  allowedDeploymentOrigin: 'https://p256-signer.tumf.dev' }));
 writeFileSync(path.join(dist, '.nojekyll'), '');
+writeFileSync(path.join(dist, 'CNAME'), 'p256-signer.tumf.dev\n');
 const bundled = bundledPackages();
 const notices = [
   'P-256 Signer deployment Web — third-party notices', '',
@@ -173,7 +174,7 @@ const notices = [
     `${entry.package} ${entry.version}`, `  license: ${entry.license}`, `  source: ${entry.source}`,
     `  license text: ./${entry.servedPath} (SHA-256 ${entry.sha256})`, '']),
   'WalletConnect Community License Agreement conditions are reproduced verbatim at',
-  'https://tumf.github.io/p256-signer-web/licenses/walletconnect-LICENSE.md. This notice is not legal approval, registration,',
+  'https://p256-signer.tumf.dev/licenses/walletconnect-LICENSE.md. This notice is not legal approval, registration,',
   'commercial entitlement or Reown endorsement.', '',
   'Bundled npm packages (name@version license), including nested node_modules copies:',
   ...bundled.map((entry) => `  ${entry.id} ${entry.license}`), '',

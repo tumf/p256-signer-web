@@ -1,5 +1,5 @@
 // Pages has no backend. Closed, public HTTPS read endpoints; no operator credentials.
-export const SITE_URL = 'https://tumf.github.io/p256-signer-web/';
+export const SITE_URL = 'https://p256-signer.tumf.dev/';
 const RPC = Object.freeze({
   '/rpc': 'https://polygon-bor-rpc.publicnode.com/',
   '/rpc/1': 'https://ethereum-rpc.publicnode.com/',
