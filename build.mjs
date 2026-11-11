@@ -173,7 +173,7 @@ const notices = [
     `${entry.package} ${entry.version}`, `  license: ${entry.license}`, `  source: ${entry.source}`,
     `  license text: ./${entry.servedPath} (SHA-256 ${entry.sha256})`, '']),
   'WalletConnect Community License Agreement conditions are reproduced verbatim at',
-  '/licenses/walletconnect-LICENSE.md. This notice is not legal approval, registration,',
+  'https://tumf.github.io/p256-signer-web/licenses/walletconnect-LICENSE.md. This notice is not legal approval, registration,',
   'commercial entitlement or Reown endorsement.', '',
   'Bundled npm packages (name@version license), including nested node_modules copies:',
   ...bundled.map((entry) => `  ${entry.id} ${entry.license}`), '',

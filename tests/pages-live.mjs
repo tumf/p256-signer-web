@@ -25,19 +25,30 @@ try {
     await page.waitForLoadState('networkidle');
     assert.equal(await page.evaluate(() => isSecureContext), true);
     assert.equal(await page.locator('meta[http-equiv="Content-Security-Policy"]').count(), 1);
+    if (['safe-request.html', 'key-change.html', 'prefund.html'].includes(route)) {
+      const home = page.getByRole('link', {name:'配備Web', exact:true});
+      assert.equal(await home.evaluate(link => link.href), base);
+      await home.click();
+      await page.waitForURL(base);
+      assert.equal(page.url(), base);
+    }
   }
   await page.goto(base);
   const config = await page.evaluate(async () => (await fetch('./config.json')).json());
   assert.equal(config.allowedDeploymentOrigin, 'https://tumf.github.io');
   assert.match(config.walletConnectProjectId, /^[0-9a-f]{32}$/);
-  const read = await page.evaluate(async () => {
-    const r = await fetch('https://polygon-bor-rpc.publicnode.com/', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'omit',
-      body: JSON.stringify({jsonrpc:'2.0', id:1, method:'eth_chainId', params:[]}) });
-    return r.json();
-  });
-  assert.equal(read.result, '0x89');
-  console.log('PASS: five real HTTPS routes, secure context, static config and browser public RPC read');
+  for (const [host, chainId] of [['polygon-bor-rpc.publicnode.com','0x89'], ['ethereum-rpc.publicnode.com','0x1'],
+      ['base-rpc.publicnode.com','0x2105'], ['base-sepolia-rpc.publicnode.com','0x14a34']]) {
+    const read = await page.evaluate(async host => {
+      const r = await fetch('https://' + host + '/', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, credentials:'omit', redirect:'error',
+        body: JSON.stringify({jsonrpc:'2.0', id:1, method:'eth_chainId', params:[]}) });
+      return r.json();
+    }, host);
+    assert.equal(read.jsonrpc, '2.0'); assert.equal(read.id, 1); assert.equal(read.result, chainId);
+  }
+  assert.deepEqual(errors, []);
+  console.log('PASS: five real HTTPS routes, three project-home links, secure context, static config and four browser public RPC reads');
   // Open a genuine pending SignClient pairing with a fresh synthetic public handoff.
   const { freshSigner } = await import('./support/safe-fixtures.mjs');
   const signer = await freshSigner();
