@@ -36,6 +36,10 @@ Original project code remains `UNLICENSED` (all rights reserved); public visibil
 
 Tests use public contract runtimes and synthetic software-key fixtures. They are not production keys or evidence of physical Secure Enclave authentication.
 
+## Migration status
+
+Pages HTTPS and public RPC reads are live. The existing Reown project currently refuses the new origin (`Unauthorized: origin not allowed`). Add `https://tumf.github.io` to its allowed origins, then require `node tests/pages-live.mjs` to pass before changing the iPhone app URLs. The app has not been switched.
+
 ## Deployment
 
 The Pages workflow tests and builds `main`, uploads only `dist/`, and deploys with the GitHub Pages OIDC workflow. No app/TestFlight release is performed here.
