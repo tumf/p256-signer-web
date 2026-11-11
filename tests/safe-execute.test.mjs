@@ -186,7 +186,7 @@ for(const change of ['reset','input']) test(`observation ${change} ignores late 
 test('read transport is same-origin, bounded and validates envelope before returning result', async()=>{
  assert.equal(typeof executeModule.safeReadRPC,'function');
  let called=0;
- const fetcher=async(url,options)=>{called++;assert.equal(url,'https://p256-signer.mini.tumf.dev/rpc');assert.equal(options.redirect,'error');assert.equal(options.cache,'no-store');
+ const fetcher=async(url,options)=>{called++;assert.equal(url,'https://polygon-bor-rpc.publicnode.com/');assert.equal(options.redirect,'error');assert.equal(options.cache,'no-store');
   const q=JSON.parse(options.body);assert.equal(q.method,'eth_chainId');return new Response(JSON.stringify({jsonrpc:'2.0',id:q.id,result:'0x89'}));};
  assert.equal(await executeModule.safeReadRPC('eth_chainId',[],fetcher),'0x89');assert.equal(called,1);
  await assert.rejects(executeModule.safeReadRPC('eth_sendTransaction',[],fetcher));assert.equal(called,1);

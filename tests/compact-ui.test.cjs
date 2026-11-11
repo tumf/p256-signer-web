@@ -70,7 +70,7 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
       const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
       contexts.push(context);
       await context.route('**/*', route => {
-        if (route.request().url().startsWith('https://p256-signer.mini.tumf.dev/rpc')) {
+        if (route.request().url().startsWith('https://polygon-bor-rpc.publicnode.com/')) {
           const body = route.request().postDataJSON();
           return chain.rpc(body.method, body.params).then(result => route.fulfill({json:{jsonrpc:'2.0',id:body.id,result}}),e=>route.fulfill({json:{jsonrpc:'2.0',id:body.id,error:{code:e.code||-32000,message:e.message}}}));
         }
@@ -339,7 +339,7 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
     let reachedSwitch;
     const switchStarted = new Promise((resolve) => { reachedSwitch = resolve; });
     let holdSwitch = true;
-    await recovered.route('**/rpc', async (route) => {
+    await recovered.route('https://polygon-bor-rpc.publicnode.com/**', async (route) => {
       if (holdSwitch) { holdSwitch = false; reachedSwitch(); await switchGate; }
       await route.fallback();
     });
@@ -369,7 +369,7 @@ test('compact built UI: connect separately, send once, reject/retry, unknown/rec
     let reachedRead;
     const reached = new Promise((resolve) => { reachedRead = resolve; });
     let readHeld = false;
-    await stale.route('**/rpc', async (route) => {
+    await stale.route('https://polygon-bor-rpc.publicnode.com/**', async (route) => {
       const body = route.request().postDataJSON();
       const response = await route.fetch({url: origin + '/rpc'});
       if (!readHeld && body.method === 'eth_getBlockByNumber' && body.params[0] !== 'latest') {

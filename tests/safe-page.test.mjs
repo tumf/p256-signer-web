@@ -19,7 +19,7 @@ async function collectDownloaded(page, packet, now) {
     owners:[{address:expected.signer,kind:'hybrid',...key}],threshold:1,nonce:expected.nonce,account:'0x'+'77'.repeat(20),
     block:{number:b.number.toString(),hash:b.hash},generation:1,attempt:'none'};
   let simulations=0;
-  await page.route('**/rpc',async route=>{
+  await page.route('https://polygon-bor-rpc.publicnode.com/**',async route=>{
     const q=route.request().postDataJSON(),[target,slot]=q.params;let result;
     if(q.method==='eth_getCode'&&target===expected.safe.toLowerCase())result=fixture.runtime;
     else if(q.method==='eth_getCode'&&target===singleton)result=fixture.singletonRuntime;
@@ -71,7 +71,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const app = path.resolve(here, '..');
 const ORIGIN = 'https://tumf.github.io';
 const DEPLOYMENT_CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; "
-  + "connect-src 'self' https://p256-signer.mini.tumf.dev wss://relay.walletconnect.com https://relay.walletconnect.com; "
+  + "connect-src 'self' https://polygon-bor-rpc.publicnode.com https://ethereum-rpc.publicnode.com https://base-rpc.publicnode.com https://base-sepolia-rpc.publicnode.com wss://relay.walletconnect.com https://relay.walletconnect.com; "
   + "base-uri 'none'; frame-ancestors 'none'; form-action 'none'; object-src 'none'";
 let dist, server, port, browser, harness;
 

@@ -150,7 +150,7 @@ function packageNotice(entry) {
 // 3. Static files and verbatim licenses.
 const pages = ['index.html', 'safe-request.html', 'safe-execute.html', 'key-change.html', 'prefund.html'];
 const csp = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; "
-  + "connect-src 'self' https://p256-signer.mini.tumf.dev wss://relay.walletconnect.com https://relay.walletconnect.com "
+  + "connect-src 'self' https://polygon-bor-rpc.publicnode.com https://ethereum-rpc.publicnode.com https://base-rpc.publicnode.com https://base-sepolia-rpc.publicnode.com wss://relay.walletconnect.com https://relay.walletconnect.com "
   + "https://verify.walletconnect.org https://verify.walletconnect.com; "
   + "frame-src https://verify.walletconnect.org https://verify.walletconnect.com; "
   + "base-uri 'none'; form-action 'none'; object-src 'none'";

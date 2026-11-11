@@ -26,7 +26,7 @@ GitHub Pages serves only `dist/`. All script and QR generation code is local. Th
 
 The exact origin is `https://tumf.github.io`; `/p256-signer-web/` is the site path, not an origin. Other projects under that GitHub account share the same browser origin and storage trust boundary. Use a dedicated custom hostname if that shared trust boundary becomes unacceptable.
 
-Pages cannot run a POST RPC endpoint. The existing `https://p256-signer.mini.tumf.dev` service remains the read-only relay for the four closed chains. CORS allows exactly the Pages origin on the exact RPC routes; the existing method/parameter/size/time bounds remain. The relay never accepts transaction submission or signing. Production RPC providers and credentials are operator configuration, never build inputs.
+Pages cannot run a POST RPC endpoint. The browser reads the four fixed public PublicNode HTTPS endpoints in `site.js`, with no API key, cookies or operator credentials. Client transport admits only the explicit read-method list; wallet submission remains a separate explicit user action. Providers see queried addresses, call data and client IP. Existing chain/code-hash/block validation remains mandatory; RPC responses are untrusted. The Tailscale-only mini service is not a Web dependency. Browser-network protections are not bypassed.
 
 The Web offers explicit wallet connection and explicit user-controlled requests. A page load or QR download never signs or sends. Saved QR images contain connection information; do not share them and delete them after use. Existing browser records remain at the old origin and are not copied automatically.
 

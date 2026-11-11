@@ -1,4 +1,4 @@
-import { relayURL } from './site.js';
+import { readURL } from './site.js';
 // Prefund page: renders the typed prefund-controller view into prefund.html's four fixed sections and wires explicit
 // user intents. Domain behavior comes only from typed presentation data, never from parsing visible labels. All public
 // and peer text goes through textContent; raw error text is never shown. The bootstrap at the bottom injects the
@@ -272,8 +272,8 @@ async function relay(route, method, params) {
   const abort = new AbortController();
   const timer = setTimeout(() => abort.abort(), RPC_TIMEOUT_MS);
   try {
-    const response = await fetch(relayURL(route), { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      credentials: 'same-origin', referrerPolicy: 'no-referrer', signal: abort.signal,
+    const response = await fetch(readURL(route, method), { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', signal: abort.signal,
       body: JSON.stringify({ jsonrpc: '2.0', id: ++rpcId, method, params }) });
     if (!response.ok) throw new TypeError('relay unavailable');
     const body = await response.json();

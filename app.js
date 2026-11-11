@@ -1,4 +1,4 @@
-import { relayURL } from './site.js';
+import { readURL } from './site.js';
 // Page bootstrap: fixed public config, same-origin read-only RPC, wallet manager, controller and UI.
 // Order matters: the transactional attempt store settles before any deployment command is admitted.
 import { AttemptStore, LEGACY_KEY } from './attempt-store.js';
@@ -21,7 +21,7 @@ async function relay(route, method, params) {
   const abort = new AbortController();
   const timer = setTimeout(() => abort.abort(), RPC_TIMEOUT_MS);
   try {
-    const response = await fetch(relayURL(route), {
+    const response = await fetch(readURL(route, method), {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
       referrerPolicy: 'no-referrer', signal: abort.signal,
       body: JSON.stringify({ jsonrpc: '2.0', id: ++rpcId, method, params }),

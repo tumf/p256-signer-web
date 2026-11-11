@@ -35,7 +35,7 @@ test('WalletConnect configuration: only a 32-hex public ID at the fixed origin e
   assert.deepEqual(walletConnectOptions(PROJECT, ORIGIN), {
     projectId: PROJECT, chains: [137], optionalChains: [], methods: ['eth_sendTransaction', 'wallet_switchEthereumChain'],
     optionalMethods: [], events: ['accountsChanged', 'chainChanged'], optionalEvents: [],
-    rpcMap: { 137: 'https://p256-signer.mini.tumf.dev/rpc' }, showQrModal: false, telemetryEnabled: false,
+    rpcMap: { 137: 'https://polygon-bor-rpc.publicnode.com/' }, showQrModal: false, telemetryEnabled: false,
     relayUrl: 'wss://relay.walletconnect.com',
     metadata: { name: 'P-256 Signer 配備Web', description: '選んだSignerをPolygonへ配備します', url: ORIGIN, icons: [] },
   });
@@ -355,7 +355,7 @@ test('real @walletconnect/ethereum-provider 2.26.0 initializes with the exact op
   assert.equal(probe.captured.telemetryEnabled, false);
   // The SDK's own resolved session request namespace: Polygon only, the two methods, our relay RPC.
   assert.deepEqual(probe.rpc, { chains: ['eip155:137'], optionalChains: [], methods: ['eth_sendTransaction',
-    'wallet_switchEthereumChain'], optionalMethods: [], rpcMap: { 137: 'https://p256-signer.mini.tumf.dev/rpc' }, showQrModal: false });
+    'wallet_switchEthereumChain'], optionalMethods: [], rpcMap: { 137: 'https://polygon-bor-rpc.publicnode.com/' }, showQrModal: false });
   assert.equal(probe.modal, null, 'no AppKit modal instance');
   assert.equal(probe.during, 'connecting', 'relay unreachable: pairing never completes');
   assert.equal(probe.after, 'disconnected');
