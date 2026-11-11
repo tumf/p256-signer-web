@@ -1,7 +1,7 @@
-import { readURL } from './site.js';
+import { readRPC as relay } from './read-rpc.js';
 // Key-change page: renders the typed key-controller view into key-change.html's four fixed sections and wires
 // explicit user intents. All public and peer text goes through textContent; no raw error text is ever shown.
-// The bootstrap at the bottom injects the same-origin read-only RPC, the shared WalletManager (executor wallet), the
+// The bootstrap at the bottom injects the fixed public read-only RPC, the shared WalletManager (executor wallet), the
 // dedicated attempt store and the lazily loaded SignClient; tests mount the same renderer with controlled deps.
 import { KeyChangeController, MESSAGES } from './key-controller.js';
 import { KeyAttemptStore } from './key-attempt-store.js';
@@ -353,25 +353,6 @@ export function mountKeyChangePage(doc, { controller, wallet, loadQR }) {
 // ---------------------------------------------------------------------------------------------------------------
 // Production bootstrap (skipped when a local test harness mounts the renderer itself)
 
-const RPC_TIMEOUT_MS = 10_000;
-let rpcId = 0;
-
-/** One read through the fixed same-origin relay route of one closed chain (`chains.js`); never caller text. */
-async function relay(route, method, params) {
-  const abort = new AbortController();
-  const timer = setTimeout(() => abort.abort(), RPC_TIMEOUT_MS);
-  try {
-    const response = await fetch(readURL(route, method), { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', signal: abort.signal,
-      body: JSON.stringify({ jsonrpc: '2.0', id: ++rpcId, method, params }) });
-    if (!response.ok) throw new TypeError('relay unavailable');
-    const body = await response.json();
-    if (body && body.error) throw Object.assign(new Error('RPC error'), { code: -32000 });
-    return body.result;
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 const rpcFor = (selected) => (method, params) => relay(selected.route, method, params);
 const rpc = rpcFor(POLYGON);

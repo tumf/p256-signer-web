@@ -1,5 +1,5 @@
-import { readURL } from './site.js';
-// Page bootstrap: fixed public config, same-origin read-only RPC, wallet manager, controller and UI.
+import { readRPC as relay } from './read-rpc.js';
+// Page bootstrap: fixed public config, fixed public read-only RPC, wallet manager, controller and UI.
 // Order matters: the transactional attempt store settles before any deployment command is admitted.
 import { AttemptStore, LEGACY_KEY } from './attempt-store.js';
 import { RegistrationController, validateRecord } from './controller.js';
@@ -8,37 +8,8 @@ import { WalletManager } from './wallet.js';
 import { inspect } from './model.js';
 import { POLYGON } from './chains.js';
 
-const RPC_TIMEOUT_MS = 10_000;
 // Per-tab copy of the validated public plan so a reload shows the same plan (public manifest bytes only).
 const PLAN_KEY = 'p256.registration.plan.v1';
-let rpcId = 0;
-
-/**
- * POST one JSON-RPC object to the same-origin relay route of one closed chain (`chains.js`; Polygon `/rpc`). The route
- * is the chain's fixed constant, never caller text. HTTP/transport failure has no numeric code.
- */
-async function relay(route, method, params) {
-  const abort = new AbortController();
-  const timer = setTimeout(() => abort.abort(), RPC_TIMEOUT_MS);
-  try {
-    const response = await fetch(readURL(route, method), {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin',
-      referrerPolicy: 'no-referrer', signal: abort.signal,
-      body: JSON.stringify({ jsonrpc: '2.0', id: ++rpcId, method, params }),
-    });
-    if (!response.ok) throw new TypeError(`relay HTTP ${response.status}`);
-    const body = await response.json();
-    if (body && body.error) {
-      const error = new Error(String(body.error.message || 'RPC error').slice(0, 200));
-      error.code = Number.isInteger(body.error.code) ? body.error.code : -32000;
-      throw error;
-    }
-    return body.result;
-  } finally {
-    clearTimeout(timer);
-  }
-}
-
 /** The read-only relay client of one closed chain. */
 const rpcFor = (chain) => (method, params) => relay(chain.route, method, params);
 const rpc = rpcFor(POLYGON);

@@ -376,7 +376,7 @@ export async function safeReadRPC(method, params, fetcher = globalThis.fetch) {
   const abort = new AbortController(); let timer, reader, active = true;
   const run = async () => {
     const response = await fetcher(readURL('/rpc', method), { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', redirect: 'error', cache: 'no-store', signal: abort.signal, body });
+      credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', cache: 'no-store', signal: abort.signal, body });
     if (!active || !response.ok || !response.body) reject('Read-only relay unavailable');
     reader = response.body.getReader(); const decoder = new TextDecoder('utf-8', { fatal: true });
     let text = '', size = 0;

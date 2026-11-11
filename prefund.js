@@ -1,8 +1,8 @@
-import { readURL } from './site.js';
+import { readRPC as relay } from './read-rpc.js';
 // Prefund page: renders the typed prefund-controller view into prefund.html's four fixed sections and wires explicit
 // user intents. Domain behavior comes only from typed presentation data, never from parsing visible labels. All public
 // and peer text goes through textContent; raw error text is never shown. The bootstrap at the bottom injects the
-// same-origin read-only RPC, the shared WalletManager (with truthful funding metadata) and the dedicated
+// fixed public read-only RPC, the shared WalletManager (with truthful funding metadata) and the dedicated
 // FundingAttemptStore; tests mount the same renderer with controlled dependencies.
 import { CURRENT_TEXT, PrefundController } from './prefund-controller.js';
 import { FundingAttemptStore } from './prefund-attempt-store.js';
@@ -264,25 +264,6 @@ export function mountPrefundPage(doc, { controller, wallet, loadQR }) {
 // ---------------------------------------------------------------------------------------------------------------
 // Production bootstrap (skipped when a local test harness mounts the renderer itself)
 
-const RPC_TIMEOUT_MS = 10_000;
-let rpcId = 0;
-
-/** One read through the fixed same-origin relay route of one closed chain (`chains.js`); never caller text. */
-async function relay(route, method, params) {
-  const abort = new AbortController();
-  const timer = setTimeout(() => abort.abort(), RPC_TIMEOUT_MS);
-  try {
-    const response = await fetch(readURL(route, method), { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer', signal: abort.signal,
-      body: JSON.stringify({ jsonrpc: '2.0', id: ++rpcId, method, params }) });
-    if (!response.ok) throw new TypeError('relay unavailable');
-    const body = await response.json();
-    if (body && body.error) throw Object.assign(new Error('RPC error'), { code: -32000 });
-    return body.result;
-  } finally {
-    clearTimeout(timer);
-  }
-}
 
 const rpcFor = (selected) => (method, params) => relay(selected.route, method, params);
 const rpc = rpcFor(POLYGON);
